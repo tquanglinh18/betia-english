@@ -1,0 +1,80 @@
+@import "responsive";
+
+$titleGrayColor: #121d26;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  padding: 3.75rem 2rem;
+  width: 100%;
+  display: flex;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: column-reverse;
+  gap: 2rem;
+  @include tablet {
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  h3 {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+
+  p {
+    margin-bottom: 0.25rem;
+  }
+  &__contact-info {
+    width: 100%;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    > h3 {
+      &:first-child {
+        font-weight: bold;
+        color: $titleGrayColor;
+        opacity: 0.8;
+      }
+    }
+
+    @include desktop {
+      width: 50%;
+    }
+  }
+
+  &__publisher {
+    width: 100%;
+    @include flex-col-center();
+    gap: 2rem;
+    @include desktop {
+      width: 45%;
+      @include flex-center();
+      gap: 3.75rem;
+    }
+
+    &--member {
+      @include flex-col-center();
+      gap: 1.25rem;
+      h3 {
+        font-weight: bold;
+        color: $titleGrayColor;
+        opacity: 0.8;
+        text-align: center;
+      }
+    }
+  }
+}

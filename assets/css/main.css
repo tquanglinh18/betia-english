@@ -10,7 +10,7 @@
 @media screen and (min-width: 1289px) {
 }
 
-@font-face {
+/* @font-face {
   font-family: "Myriad Pro";
   src: url("../fontsMyriadPro-Regular.eot");
   src: url("../fontsMyriadPro-Regular.eot?#iefix") format("embedded-opentype"),
@@ -26,4 +26,4 @@ body {
   font-family: Myriad Pro;
   font-weight: normal;
   font-style: normal;
-}
+} */
