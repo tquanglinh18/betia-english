@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Betia-Header</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/styles-scss.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-betia">
+        <img src="./assets/images/logo_betia.png" alt="" />
+      </div>
+
+      <div class="header-list-option">
+        <div class="header-link">
+          <div
+            id="products"
+            class="header-option"
+            onclick="showSubMenu('products')"
+          >
+            <div class="menu-item">
+              <a>
+                <p class="">Sản phẩm</p>
+              </a>
+              <img src="./assets/images/ic_dropdown.png" alt="" />
+            </div>
+            <div
+              id="products-sub-menu"
+              class="products-sub-menu sub-menu"
+              style="display: none"
+            >
+              <div class="products-item">
+                <img src="./assets/images/logo_betia.png" alt="" />
+                <h3>Betia 1</h3>
+              </div>
+
+              <div class="products-item">
+                <img src="./assets/images/logo_betia.png" alt="" />
+                <h3>Betia 1</h3>
+              </div>
+
+              <div class="products-item">
+                <img src="./assets/images/logo_betia.png" alt="" />
+                <h3>Betia 1</h3>
+              </div>
+
+              <div class="products-item">
+                <img src="./assets/images/logo_betia.png" alt="" />
+                <h3>Betia 1</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-option">
+            <a href="">
+              <p class="">Cửa hàng</p>
+            </a>
+            <!-- <img src="./assets/images/ic_dropdown.png" alt="" /> -->
+          </div>
+
+          <div id="guide" class="header-option" onclick="showSubMenu('guide')">
+            <div class="menu-item">
+              <a>
+                <p class="">Hướng dẫn</p>
+              </a>
+              <img src="./assets/images/ic_dropdown.png" alt="" />
+            </div>
+
+            <div
+              style="display: none"
+              id="guide-sub-menu"
+              class="guide-sub-menu sub-menu"
+            >
+              <a class="">Tin tức</a>
+              <a class="">Sự kiện</a>
+            </div>
+          </div>
+
+          <div class="header-option">
+            <a href="">
+              <p class="">Tin tức & Sự kiện</p>
+            </a>
+            <!-- <img src="./assets/images/ic_dropdown.png" alt="" /> -->
+          </div>
+
+          <div class="header-option">
+            <a href="">
+              <p class="">Giới thiệu</p>
+            </a>
+            <!-- <img src="./assets/images/ic_dropdown.png" alt="" /> -->
+          </div>
+        </div>
+
+        <div class="header-account">
+          <div class="header-option">
+            <a href="" class="btn-base-secondary">Đăng ký</a>
+          </div>
+
+          <div class="header-option">
+            <a href="" class="btn-base-secondary">Đăng nhập</a>
+          </div>
+        </div>
+
+        <div class="header-buy-package">
+          <a href="" class="btn-base-primary"> Mua gói học </a>
+        </div>
+
+        <div class="ic-menu-mobile" id="ic-menu-mobile" onclick="showMenuMobile()">
+          <img src="./assets/images/ic_menu_mobile.png" alt="" />
+        </div>
+      </div>
+    </header>
+
+    <div style="display: none;" class="menu-mobile">
+      <div class="menu-mobile--contents">
+        <div class="">
+          <h3>Sản phẩm</h3>
+          <div class="list-items">
+            <div class="products-item">
+              <img src="./assets/images/logo_betia.png" alt="" />
+              <h3>Betia 1</h3>
+            </div>
+            <div class="products-item">
+              <img src="./assets/images/logo_betia.png" alt="" />
+              <h3>Betia 1</h3>
+            </div>
+            <div class="products-item">
+              <img src="./assets/images/logo_betia.png" alt="" />
+              <h3>Betia 1</h3>
+            </div>
+            <div class="products-item">
+              <img src="./assets/images/logo_betia.png" alt="" />
+              <h3>Betia 1</h3>
+            </div>
+            <div class="products-item">
+              <img src="./assets/images/logo_betia.png" alt="" />
+              <h3>Betia 1</h3>
+            </div>
+            <div class="products-item">
+              <img src="./assets/images/logo_betia.png" alt="" />
+              <h3>Betia 1</h3>
+            </div>
+            <div class="products-item">
+              <img src="./assets/images/logo_betia.png" alt="" />
+              <h3>Betia 1</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="">
+          <h3>Sách</h3>
+          <div class="list-items">
+            <div class="products-item">
+              <img src="./assets/images/logo_betia.png" alt="" />
+              <h3>Betia 1</h3>
+            </div>
+            <div class="products-item">
+              <img src="./assets/images/logo_betia.png" alt="" />
+              <h3>Betia 1</h3>
+            </div>
+            <div class="products-item">
+              <img src="./assets/images/logo_betia.png" alt="" />
+              <h3>Betia 1</h3>
+            </div>
+            <div class="products-item">
+              <img src="./assets/images/logo_betia.png" alt="" />
+              <h3>Betia 1</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-mobile-option">
+          <a href="">Cửa hàng</a>
+        </div>
+
+        <div class="header-mobile-option">
+          <a href="">Tin tức & Sự kiện</a>
+        </div>
+
+        <div class="header-mobile-option">
+          <a href="">Giới thiệu</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

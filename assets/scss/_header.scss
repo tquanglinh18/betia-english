@@ -1,0 +1,180 @@
+@import "responsive";
+
+$btnBaseColor: #36bdf8;
+$whiteColor: #ffffff;
+$black25: #252525;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+  .logo-betia img {
+    height: 48px;
+    width: 100%;
+  }
+
+  .header-option,
+  .header-list-option,
+  .menu-item,
+  .header-buy-package {
+    @include flex-center();
+  }
+
+  .header-option {
+    min-width: 80px;
+    margin-right: 1.25rem;
+    margin-left: 1.25rem;
+    text-align: center;
+    color: $black25;
+    font-weight: bold;
+    cursor: pointer;
+    p {
+      width: 100%;
+      padding: 0px 6px;
+    }
+  }
+
+  .header-list-option {
+    gap: 2.5rem;
+    :first-child {
+      margin-left: 0px;
+    }
+    :last-child {
+      margin-right: 0px;
+    }
+  }
+
+  #ic-menu-mobile img {
+    width: 36px;
+    @include desktop {
+      display: none;
+    }
+  }
+}
+
+.guide-sub-menu {
+  position: absolute;
+  background-color: red;
+  top: 80px;
+  min-width: 120px;
+  @include flex-col-center();
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.products-sub-menu {
+  position: absolute;
+  @include flex-center();
+  gap: 2rem;
+  left: 0;
+  right: 0;
+  top: 80px;
+  width: 100vw;
+  padding: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+}
+
+.products-item {
+  @include flex-col-center();
+  gap: 1rem;
+
+  img {
+    width: 64px;
+    border-radius: 1rem;
+  }
+
+  h3 {
+    font-weight: bold;
+  }
+}
+
+.header-link {
+  display: none;
+  @include desktop {
+    @include flex-center();
+  }
+}
+
+.header-account {
+  display: none;
+  @include tablet {
+    @include flex-center();
+  }
+}
+
+.menu-mobile {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  color: black;
+  height: 90vh;
+  display: flex;
+  justify-content: end;
+
+  &--contents {
+    width: 100%;
+    background-color: #ccc;
+    max-width: 480px;
+    display: fixed;
+    padding: 1.5rem;
+    animation: fadeRightToLeft 0.4s linear;
+
+  }
+}
+
+@keyframes fadeRightToLeft {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.list-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  background: #fff;
+  margin-bottom: 1rem;
+  border-radius: 1.25rem;
+
+  .products-item {
+    h3 {
+      font-weight: normal !important;
+    }
+  }
+}
+
+.header-mobile-option {
+  padding: 0.5rem 1rem;
+  background: #fff;
+ margin-bottom: 1rem;
+  border-radius: 1.25rem;
+}

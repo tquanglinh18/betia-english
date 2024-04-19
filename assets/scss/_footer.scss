@@ -62,7 +62,7 @@ $titleGrayColor: #121d26;
     gap: 2rem;
     @include desktop {
       width: 45%;
-      @include flex-center();
+      flex-direction: row;
       gap: 3.75rem;
     }
 

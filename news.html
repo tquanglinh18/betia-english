@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS Teamplate</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/styles-scss.css" />
+    <link rel="stylesheet" href="./assets/css/slick.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <section>
+      <section class="page__container">
+        <div class="page__header">
+          <img src="./assets/images/ic_header_news.png" alt="" />
+          <h1>Tin tức - Sự kiện</h1>
+        </div>
+
+        <div class="news__outstanding">
+          <div class="news__slide">
+            <img src="./assets/images/bg_silde.png" alt="" />
+            <div class="news__slide--detail">
+              <div class="">
+                <p>
+                  Nổi bật
+                  <!-- <i class="fa fa-solid fa-circle fa-1x"></i> -->
+                </p>
+                <h3>Betia Family's day: giúp con làm chủ kỹ năng anh ngữ✌</h3>
+              </div>
+
+              <div class="date-posted">
+                <p>12.26.2023</p>
+                <div class="space"></div>
+                <p><i class="fa fa-eye"></i> 250</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tabs__header">
+          <button
+            id="events-header"
+            class="tabs__header--items tabs__header--active"
+            onclick="tabOpen('events-header','events-contents')"
+          >
+            Sự kiện
+          </button>
+
+          <button
+            id="news-header"
+            class="tabs__header--items"
+            onclick="tabOpen('news-header','news-contents')"
+          >
+            Tin tức
+          </button>
+        </div>
+        <div class="tabs__contents">
+          <div
+            id="events-contents"
+            class="tabs__contents--items tabs__contents--active"
+          >
+            <div class="news--grid-layout">
+              <div class="news__card">
+                <img
+                  src="https://i0.wp.com/drjennie.com/wp-content/uploads/2022/01/Betia-Ann-Init_12-15-21.jpg?fit=750%2C450&ssl=1"
+                  alt=""
+                />
+                <div class="news__card--detail">
+                  <div class="">
+                    <p>
+                      Nổi bật
+                      <!-- <i class="fa fa-solid fa-circle fa-1x"></i> -->
+                    </p>
+                    <h3>
+                      Betia Family's day: giúp con làm chủ kỹ năng anh ngữ✌
+                    </h3>
+                  </div>
+
+                  <div class="date-posted">
+                    <p>12.26.2023</p>
+                    <div class="space"></div>
+                    <p><i class="fa fa-eye"></i> 250</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="news__card">
+                <img
+                  src="https://i0.wp.com/drjennie.com/wp-content/uploads/2022/01/Betia-Ann-Init_12-15-21.jpg?fit=750%2C450&ssl=1"
+                  alt=""
+                />
+                <div class="news__card--detail">
+                  <div class="">
+                    <p>
+                      Nổi bật
+                      <!-- <i class="fa fa-solid fa-circle fa-1x"></i> -->
+                    </p>
+                    <h3>
+                      Betia Family's day: giúp con làm chủ kỹ năng anh ngữ✌
+                    </h3>
+                  </div>
+
+                  <div class="date-posted">
+                    <p>12.26.2023</p>
+                    <div class="space"></div>
+                    <p><i class="fa fa-eye"></i> 250</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="news__card">
+                <img
+                  src="https://i0.wp.com/drjennie.com/wp-content/uploads/2022/01/Betia-Ann-Init_12-15-21.jpg?fit=750%2C450&ssl=1"
+                  alt=""
+                />
+                <div class="news__card--detail">
+                  <div class="">
+                    <p>
+                      Nổi bật
+                      <!-- <i class="fa fa-solid fa-circle fa-1x"></i> -->
+                    </p>
+                    <h3>
+                      Betia Family's day: giúp con làm chủ kỹ năng anh ngữ✌
+                    </h3>
+                  </div>
+
+                  <div class="date-posted">
+                    <p>12.26.2023</p>
+                    <div class="space"></div>
+                    <p><i class="fa fa-eye"></i> 250</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="news__card">
+                <img
+                  src="https://i0.wp.com/drjennie.com/wp-content/uploads/2022/01/Betia-Ann-Init_12-15-21.jpg?fit=750%2C450&ssl=1"
+                  alt=""
+                />
+                <div class="news__card--detail">
+                  <div class="">
+                    <p>
+                      Nổi bật
+                      <!-- <i class="fa fa-solid fa-circle fa-1x"></i> -->
+                    </p>
+                    <h3>
+                      Betia Family's day: giúp con làm chủ kỹ năng anh ngữ✌
+                    </h3>
+                  </div>
+
+                  <div class="date-posted">
+                    <p>12.26.2023</p>
+                    <div class="space"></div>
+                    <p><i class="fa fa-eye"></i> 250</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="news__card">
+                <img
+                  src="https://i0.wp.com/drjennie.com/wp-content/uploads/2022/01/Betia-Ann-Init_12-15-21.jpg?fit=750%2C450&ssl=1"
+                  alt=""
+                />
+                <div class="news__card--detail">
+                  <div class="">
+                    <p>
+                      Nổi bật
+                      <!-- <i class="fa fa-solid fa-circle fa-1x"></i> -->
+                    </p>
+                    <h3>
+                      Betia Family's day: giúp con làm chủ kỹ năng anh ngữ✌
+                    </h3>
+                  </div>
+
+                  <div class="date-posted">
+                    <p>12.26.2023</p>
+                    <div class="space"></div>
+                    <p><i class="fa fa-eye"></i> 250</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="news-contents"
+            class="tabs__contents--items news--grid-layout"
+          >
+            <div class="news--grid-layout">
+              <div class="news__card">
+                <img
+                  src="https://cdn-i.vtcnews.vn/resize/rVC6Y1xkWsRzy5U7YiPyMA2/upload/2023/11/28/01-le-ra-mat-betia-english-17204146.jpg"
+                  alt=""
+                />
+                <div class="news__card--detail">
+                  <div class="">
+                    <p>
+                      Nổi bật
+                      <!-- <i class="fa fa-solid fa-circle fa-1x"></i> -->
+                    </p>
+                    <h3>
+                      Betia Family's day: giúp con làm chủ kỹ năng anh ngữ✌
+                    </h3>
+                  </div>
+
+                  <div class="date-posted">
+                    <p>12.26.2023</p>
+                    <div class="space"></div>
+                    <p><i class="fa fa-eye"></i> 250</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="news__card">
+                <img
+                  src="https://cdn-i.vtcnews.vn/resize/rVC6Y1xkWsRzy5U7YiPyMA2/upload/2023/11/28/01-le-ra-mat-betia-english-17204146.jpg"
+                  alt=""
+                />
+                <div class="news__card--detail">
+                  <div class="">
+                    <p>
+                      Nổi bật
+                      <!-- <i class="fa fa-solid fa-circle fa-1x"></i> -->
+                    </p>
+                    <h3>
+                      Betia Family's day: giúp con làm chủ kỹ năng anh ngữ✌
+                    </h3>
+                  </div>
+
+                  <div class="date-posted">
+                    <p>12.26.2023</p>
+                    <div class="space"></div>
+                    <p><i class="fa fa-eye"></i> 250</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="news__card">
+                <img
+                  src="https://cdn-i.vtcnews.vn/resize/rVC6Y1xkWsRzy5U7YiPyMA2/upload/2023/11/28/01-le-ra-mat-betia-english-17204146.jpg"
+                  alt=""
+                />
+                <div class="news__card--detail">
+                  <div class="">
+                    <p>
+                      Nổi bật
+                      <!-- <i class="fa fa-solid fa-circle fa-1x"></i> -->
+                    </p>
+                    <h3>
+                      Betia Family's day: giúp con làm chủ kỹ năng anh ngữ✌
+                    </h3>
+                  </div>
+
+                  <div class="date-posted">
+                    <p>12.26.2023</p>
+                    <div class="space"></div>
+                    <p><i class="fa fa-eye"></i> 250</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="news__card">
+                <img
+                  src="https://cdn-i.vtcnews.vn/resize/rVC6Y1xkWsRzy5U7YiPyMA2/upload/2023/11/28/01-le-ra-mat-betia-english-17204146.jpg"
+                  alt=""
+                />
+                <div class="news__card--detail">
+                  <div class="">
+                    <p>
+                      Nổi bật
+                      <!-- <i class="fa fa-solid fa-circle fa-1x"></i> -->
+                    </p>
+                    <h3>
+                      Betia Family's day: giúp con làm chủ kỹ năng anh ngữ✌
+                    </h3>
+                  </div>
+
+                  <div class="date-posted">
+                    <p>12.26.2023</p>
+                    <div class="space"></div>
+                    <p><i class="fa fa-eye"></i> 250</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="news__card">
+                <img
+                  src="https://cdn-i.vtcnews.vn/resize/rVC6Y1xkWsRzy5U7YiPyMA2/upload/2023/11/28/01-le-ra-mat-betia-english-17204146.jpg"
+                  alt=""
+                />
+                <div class="news__card--detail">
+                  <div class="">
+                    <p>
+                      Nổi bật
+                      <!-- <i class="fa fa-solid fa-circle fa-1x"></i> -->
+                    </p>
+                    <h3>
+                      Betia Family's day: giúp con làm chủ kỹ năng anh ngữ✌
+                    </h3>
+                  </div>
+
+                  <div class="date-posted">
+                    <p>12.26.2023</p>
+                    <div class="space"></div>
+                    <p><i class="fa fa-eye"></i> 250</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+  </body>
+</html>

@@ -1,3 +1,95 @@
 @import "responsive";
 
-@import "_footer"
+@import "_footer";
+
+@import "_header";
+
+@import "_news";
+
+$btnBasePrimaryColor: #36bdf8;
+$btnBaseSecondaryColor: #dadada;
+$whiteColor: #ffffff;
+$textSecondaryColor: #001d6c;
+$paddingNormal: 30px;
+$pageHeaderTitleColor: #121d26;
+
+@mixin flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-base-primary {
+  padding: 0.5rem 1rem;
+  background-color: $btnBasePrimaryColor;
+  color: $whiteColor;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  min-width: 120px;
+  text-align: center;
+  height: 2.5rem;
+}
+
+.btn-base-secondary {
+  padding: 0.5rem 1rem;
+  background-color: $btnBaseSecondaryColor;
+  color: $textSecondaryColor;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  min-width: 120px;
+  text-align: center;
+  height: 2.5rem;
+}
+
+.page {
+  &__container {
+    padding: 6.25rem 2rem;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+    img {
+      aspect-ratio: 1/1;
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      @include tablet {
+        width: 60px;
+        height: 60px;
+      }
+
+      @include desktop {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    h1 {
+      color: $pageHeaderTitleColor;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 72px;
+      @include tablet {
+        font-size: 40px;
+      }
+
+      @include desktop {
+        font-size: 50px;
+      }
+    }
+  }
+}
