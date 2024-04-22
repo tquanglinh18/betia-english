@@ -26,12 +26,12 @@ function tabOpen(idHeaderSelected, idContentSelected) {
   var idContentSelectedQuerry = "#" + idContentSelected;
 
   tabContent = $(".tabs__contents--items");
-  tabContent.each((index, value) => {
+  tabContent.each((value) => {
     $(value).hide();
   });
 
   tabHeader = $(".tabs__header--items");
-  tabHeader.each((index, value) => {
+  tabHeader.each((value) => {
     $(value).removeClass("tabs__header--active");
   });
 
