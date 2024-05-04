@@ -10,6 +10,8 @@
 
 @import "_store";
 
+@import "_product-detail";
+
 $btnBasePrimaryColor: #36bdf8;
 $btnBaseSecondaryColor: #dadada;
 $whiteColor: #ffffff;
@@ -60,6 +62,9 @@ $pageHeaderTitleColor: #121d26;
   @include desktop {
     padding: 1.5rem;
     font-size: 24px !important;
+  }
+  i {
+    margin-right: 1rem;
   }
 }
 

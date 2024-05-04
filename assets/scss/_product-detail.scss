@@ -1,0 +1,128 @@
+@import "responsive";
+
+@mixin flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.products {
+  @include flex-col-center();
+  width: 100%;
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .products {
+    &__detail {
+      width: 100%;
+      padding: 1rem 0;
+      @include desktop {
+        width: 62.5%;
+      }
+
+      &--banner {
+        margin-bottom: 12%;
+      }
+    }
+
+    &__payment {
+      width: 100%;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0px;
+      @include flex-col-center();
+      text-align: center;
+      gap: 50px;
+      @include desktop {
+        width: 32.5%;
+        bottom: 0px;
+      }
+
+      h3 {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 200%;
+        color: #121d26;
+      }
+
+      p {
+        line-height: 150%;
+        font-size: 20px;
+      }
+
+      &--container {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        background: #f8f8f8;
+        .products-feature {
+          text-align: start;
+          padding: 1rem;
+          h3 {
+            line-height: 150%;
+            font-weight: bold;
+            margin-bottom: 1rem;
+          }
+
+          ul {
+            list-style-type: disc;
+            padding: 0 1rem;
+            li {
+            }
+          }
+        }
+
+        .divider {
+          border-radius: 10px;
+          background: var(--hd-gray-10, #e7e8e9);
+          height: 1.5px;
+          align-self: stretch;
+        }
+
+        .package__item--body {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+#products__detail--banner-slick {
+  .slick-dots {
+    @include flex-row-center();
+    gap: 1rem;
+
+    li {
+      background-color: #e7e8e9;
+      height: 10px;
+      width: 10px;
+      border-radius: 100%;
+      aspect-ratio: 1/1;
+      color: transparent;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      @include flex-row-center();
+    }
+
+    .slick-active {
+      background-color: #36bdf8;
+    }
+  }
+}

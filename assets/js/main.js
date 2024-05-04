@@ -1,4 +1,14 @@
-$(function () {});
+$(function () {
+  $("#products__detail--banner-slick").slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  });
+});
 
 function showSubMenu(id) {
   var idSubmenuSelected = "#" + id + "-sub-menu";
@@ -26,12 +36,12 @@ function tabOpen(idHeaderSelected, idContentSelected) {
   var idContentSelectedQuerry = "#" + idContentSelected;
 
   tabContent = $(".tabs__contents--items");
-  tabContent.each((value) => {
+  tabContent.each((index, value) => {
     $(value).hide();
   });
 
   tabHeader = $(".tabs__header--items");
-  tabHeader.each((value) => {
+  tabHeader.each((index, value) => {
     $(value).removeClass("tabs__header--active");
   });
 
