@@ -76,17 +76,25 @@ $pageHeaderTitleColor: #121d26;
     width: 100%;
     p {
       color: var(--hd-red-100, #f63b2c);
-      font-size: 20px;
+      font-size: 14px;
       font-weight: 700;
       line-height: 140%;
       margin-bottom: 0.5rem;
+      @include tablet {
+        font-size: 20px;
+      }
     }
 
     h3 {
       color: var(--hd-gray-100, #121d26);
-      font-size: 42px;
+      font-size: 28px;
       font-weight: 700;
       line-height: 110%;
+      width: 100%;
+      @include tablet {
+        width: 50%;
+        font-size: 42px;
+      }
     }
   }
 
@@ -122,11 +130,12 @@ $pageHeaderTitleColor: #121d26;
   }
 }
 
-.register-receive-gifts {
+#register-receive-gifts {
   background-image: url("../images/bg_top_section1.png"),
     url("../images/bg_bottom_section1.png");
   background-repeat: no-repeat, no-repeat;
   background-position: top left, bottom right;
+  padding: 1rem;
 
   .section__items--contents {
     display: grid;
@@ -138,7 +147,7 @@ $pageHeaderTitleColor: #121d26;
     }
   }
 
-  &--table {
+  .register-receive-gifts--table {
     padding: 2.5rem;
     border-radius: 1rem;
     background: #ffe354;
@@ -156,9 +165,9 @@ $pageHeaderTitleColor: #121d26;
   text-transform: uppercase;
 }
 
-.introduce-app-book {
+#introduce-app-book {
   background: #f8f8f8;
-  padding: 1rem 0;
+  padding: 1rem;
   .contents--body {
     @include flex-col-center();
     gap: 3rem;
@@ -230,4 +239,224 @@ $pageHeaderTitleColor: #121d26;
   background: #ff6000;
   color: $whiteColor;
   text-transform: uppercase;
+  align-items: center;
+}
+
+.grid-rank-table {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
+  margin-bottom: 2rem;
+
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card-rank {
+  @include flex-col-center();
+  gap: 2rem;
+  padding: 0 30px 50px 30px;
+  border-radius: 50px;
+  max-width: 480px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+
+  &:first-child {
+    background-color: #fce4ec;
+    &--header {
+      &::before {
+        content: "🥇";
+        font-size: 56px;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    background-color: #fff0cb;
+  }
+
+  &:nth-child(3) {
+    background-color: #ebf2ff;
+  }
+  &--header {
+    height: 80px;
+    &:first-child::before {
+      content: "🥇";
+      font-size: 56px;
+    }
+
+    &:nth-child(2)::before {
+      content: "🥈";
+      font-size: 56px;
+    }
+
+    &:last-child::before {
+      content: "🥉";
+      font-size: 56px;
+    }
+  }
+
+  &--body {
+    width: 100%;
+    @include flex-col-center();
+    gap: 2rem;
+    .user {
+      &__info {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        border-radius: 30px;
+        background: #fff;
+        padding: 1.25rem;
+
+        &--avt {
+          height: 50px;
+          width: 50px;
+          aspect-ratio: 1/1;
+
+          img {
+            height: 100%;
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 100%;
+          }
+        }
+
+        P {
+          color: var(--hd-gray-100, #121d26);
+          font-size: 16px;
+          line-height: 120%;
+          @include tablet {
+            font-size: 20px;
+          }
+          line-height: 32px;
+        }
+      }
+
+      &__achievements {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+        font-size: 16px;
+        @include tablet {
+          font-size: 20px;
+        }
+
+        h5 {
+          color: #105296;
+          font-weight: 700;
+          line-height: 32px;
+        }
+
+        ul {
+          li {
+            margin-bottom: 0.5rem;
+            span {
+              color: #105296;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#rank-table {
+  background: #ffe974;
+  padding: 1rem;
+  .tabs__header {
+    @include flex-row-center();
+    padding: 0px;
+    margin-bottom: 3rem;
+  }
+}
+
+#difference-point {
+  background: #f8f8f8;
+  padding: 1rem;
+
+  .contents--body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  .card {
+    border-radius: 50px;
+    aspect-ratio: 1/1;
+    position: relative;
+    &__front {
+      height: fit-content;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 50px;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 2rem;
+      background: linear-gradient(
+        180deg,
+        #ebe2da 0%,
+        #ebe2da 50%,
+        rgba(235, 226, 218, 0) 100%
+      );
+      
+      &:hover {
+        height: 100%;;
+      }
+
+      &--title {
+        display: flex;
+        gap: 2.5rem;
+
+        h3 {
+          color: var(--hd-gray-100, #121d26);
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 140%;
+          width: fit-content;
+        }
+
+        & > div {
+          width: 48px;
+          height: 48px;
+          img {
+            width: 48px;
+            height: 48px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+          }
+        }
+      }
+
+      &--desc {
+        p {
+          margin-bottom: 1rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &__back {
+      img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 50px;
+      }
+    }
+  }
 }
