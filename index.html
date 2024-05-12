@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Betia English</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/styles-scss.css" />
+    <link rel="stylesheet" href="./assets/css/slick.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/assets/images/logo_betia.png"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Betia English</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="./assets/css/main.css" />
-  <link rel="stylesheet" href="./assets/css/base.css" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="stylesheet" href="./assets/css/styles-scss.css" />
-  <link rel="stylesheet" href="./assets/css/slick.css" />
-  <link rel="shortcut icon" type="image/png" href="/assets/images/logo_betia.png" />
-</head>
-
-<body>
-  <section>
-    <!-- <div id="banner-slide" class="banner-slide">
+  <body>
+    <section>
+      <!-- <div id="banner-slide" class="banner-slide">
         <a href="">
           <img src="assets/images/banner_main.png" alt="" />
         </a>
@@ -38,474 +41,760 @@
         </a>
       </div> -->
 
-    <div id="register-receive-gifts" class="section__item">
-      <div class="section__items--contents">
-        <div class="">
-          <img src="assets/images/img_ingame_islands.png" alt="" />
+      <div id="register-receive-gifts" class="section__item">
+        <div class="section__items--contents">
+          <div class="">
+            <img src="assets/images/img_ingame_islands.png" alt="" />
+          </div>
+          <div class="register-receive-gifts--table">
+            <div class="contents--header">
+              <p>Gói học Betia</p>
+              <h3>Ưu đãi giớ hạn</h3>
+            </div>
+
+            <div class="contents--body">
+              <div class="input-field">
+                <label for="name-parent">Họ và tên ba mẹ (*)</label>
+                <input
+                  type="text"
+                  id="name-parent"
+                  placeholder="Ví dụ: Nguyễn Văn An"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="phone-parent">Số điện thoại ba mẹ (*)</label>
+                <input
+                  type="text"
+                  id="phone-parent"
+                  placeholder="Ví dụ: 0987654321"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="age-child">Độ tuổi của con (*)</label>
+                <input type="text" id="age-child" placeholder="Ví dụ: 8 tuổi" />
+              </div>
+            </div>
+
+            <div class="contents--footer">
+              <a href="" class="btn-register-receive-gifts">
+                Đăng kí nhận ưu đãi
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="register-receive-gifts--table">
+      </div>
+
+      <div id="introduce-app-book" class="section__items">
+        <div class="section__items--contents">
           <div class="contents--header">
-            <p>Gói học Betia</p>
-            <h3>Ưu đãi giớ hạn</h3>
+            <p>Giới thiệu</p>
+            <h3>Trọn bộ sách và ứng dụng Betia English</h3>
           </div>
 
           <div class="contents--body">
-            <div class="input-field">
-              <label for="name-parent">Họ và tên ba mẹ (*)</label>
-              <input type="text" id="name-parent" placeholder="Ví dụ: Nguyễn Văn An" />
-            </div>
+            <div class="tabs__header">
+              <button
+                id="betia1-header"
+                class="tabs__header--items tabs__header--active"
+                onclick="tabOpen('betia1-header','betia1-contents')"
+              >
+                Betia English 1
+              </button>
 
-            <div class="input-field">
-              <label for="phone-parent">Số điện thoại ba mẹ (*)</label>
-              <input type="text" id="phone-parent" placeholder="Ví dụ: 0987654321" />
+              <button
+                id="betia2-header"
+                class="tabs__header--items"
+                onclick="tabOpen('betia2-header','betia2-contents')"
+              >
+                Betia English 2
+              </button>
             </div>
+            <div class="tabs__contents">
+              <div
+                id="betia1-contents"
+                class="tabs__contents--items tabs__contents--active"
+              >
+                <div class="intro__items">
+                  <div class="">
+                    <img src="assets/images/banner_main.png" alt="" />
+                  </div>
+                  <div class="intro__items--contents">
+                    <h3>Khởi động cuộc phiêu lưu</h3>
+                    <p>
+                      Sau khi nhập vai thành nhân vật chính, trở thành Linker -
+                      người hùng mang nhiệm vụ giải cứu thế giới Betia, học sinh
+                      được gặp gỡ nhiều nhân vật, trải qua nhiều câu chuyện thú
+                      vị khác nhau. Betia English 1 giúp học sinh bước đầu hình
+                      thành phản xạ tiếng Anh, chuẩn hoá phát âm và tăng cường
+                      sự tự tin trong giao tiếp.
+                    </p>
+                  </div>
+                </div>
 
-            <div class="input-field">
-              <label for="age-child">Độ tuổi của con (*)</label>
-              <input type="text" id="age-child" placeholder="Ví dụ: 8 tuổi" />
+                <div class="intro__items intro__items--revert">
+                  <div class="intro__items--img">
+                    <div class="">
+                      <img src="assets/images/banner_main.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="intro__items--contents">
+                    <h3>Tăng cường kỹ năng tiếng Anh nghe & nói</h3>
+                    <p>
+                      Gói học khởi động giúp học sinh hiểu được nội dung các hội
+                      thoại qua các từ vựng, mẫu câu ngắn; nghe hiểu cơ bản được
+                      cuộc hội thoại (3-5 từ/câu); có thể nói và viết các câu
+                      ngắn với các chunk được học (2-5 từ/câu).
+                    </p>
+                  </div>
+                </div>
+
+                <div class="intro__items">
+                  <div class="">
+                    <img src="assets/images/banner_main.png" alt="" />
+                  </div>
+                  <div class="intro__items--contents">
+                    <h3>Chỉ từ 30 phút mỗi ngày để tiến bộ</h3>
+                    <p>
+                      Lộ trình học được thiết kế bài bàn. Chỉ từ 30 phút mỗi
+                      ngày với "Nhiệm vụ học hôm nay" để phát triển toàn diện kỹ
+                      năng tiếng Anh giao tiếp. Phối hợp học cùng sách Betia
+                      Readers để tăng cường hiệu quả học tập.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="intro__button">
+                  <a href="" class="btn-more">Tìm hiểu thêm</a>
+                </div>
+              </div>
+
+              <div id="betia2-contents" class="tabs__contents--items">
+                <div class="intro__items">
+                  <div class="">
+                    <img src="assets/images/banner_main.png" alt="" />
+                  </div>
+                  <div class="intro__items--contents">
+                    <h3>Khởi động cuộc phiêu lưu</h3>
+                    <p>
+                      Sau khi nhập vai thành nhân vật chính, trở thành Linker -
+                      người hùng mang nhiệm vụ giải cứu thế giới Betia, học sinh
+                      được gặp gỡ nhiều nhân vật, trải qua nhiều câu chuyện thú
+                      vị khác nhau. Betia English 1 giúp học sinh bước đầu hình
+                      thành phản xạ tiếng Anh, chuẩn hoá phát âm và tăng cường
+                      sự tự tin trong giao tiếp.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="intro__items intro__items--revert">
+                  <div class="intro__items--img">
+                    <div class="">
+                      <img src="assets/images/banner_main.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="intro__items--contents">
+                    <h3>Tăng cường kỹ năng tiếng Anh nghe & nói</h3>
+                    <p>
+                      Gói học khởi động giúp học sinh hiểu được nội dung các hội
+                      thoại qua các từ vựng, mẫu câu ngắn; nghe hiểu cơ bản được
+                      cuộc hội thoại (3-5 từ/câu); có thể nói và viết các câu
+                      ngắn với các chunk được học (2-5 từ/câu).
+                    </p>
+                  </div>
+                </div>
+
+                <div class="intro__items">
+                  <div class="">
+                    <img src="assets/images/banner_main.png" alt="" />
+                  </div>
+                  <div class="intro__items--contents">
+                    <h3>Chỉ từ 30 phút mỗi ngày để tiến bộ 11</h3>
+                    <p>
+                      Lộ trình học được thiết kế bài bàn. Chỉ từ 30 phút mỗi
+                      ngày với "Nhiệm vụ học hôm nay" để phát triển toàn diện kỹ
+                      năng tiếng Anh giao tiếp. Phối hợp học cùng sách Betia
+                      Readers để tăng cường hiệu quả học tập.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="intro__button">
+                  <a href="" class="btn-more">Tìm hiểu thêm</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contents--footer"></div>
+        </div>
+      </div>
+
+      <div id="rank-table" class="section__items rank-table">
+        <div class="section__items--contents">
+          <div class="contents--header">
+            <p>Top học sinh</p>
+            <h3>Betia English - bảng vinh danh</h3>
+          </div>
+
+          <div class="contents--body">
+            <div class="tabs__header">
+              <button
+                id="top-week-header"
+                class="tabs__header--items tabs__header--active"
+                onclick="tabOpen('top-week-header','top-week-contents')"
+              >
+                Top tuần
+              </button>
+
+              <button
+                id="top-month-header"
+                class="tabs__header--items"
+                onclick="tabOpen('top-month-header','top-month-contents')"
+              >
+                Top tuần
+              </button>
+
+              <button
+                id="top-year-header"
+                class="tabs__header--items"
+                onclick="tabOpen('top-year-header','top-year-contents')"
+              >
+                Top tháng
+              </button>
+            </div>
+            <div class="tabs__contents">
+              <div
+                id="top-week-contents"
+                class="tabs__contents--items tabs__contents--active"
+              >
+                <div class="grid-rank-table">
+                  <div class="card-rank">
+                    <div class="card-rank--header"></div>
+                    <div class="card-rank--body">
+                      <div class="user__info">
+                        <div class="user__info--avt">
+                          <img src="assets/images/banner_main.png" alt="" />
+                        </div>
+                        <p>Tên ingame</p>
+                      </div>
+
+                      <div class="user__achievements">
+                        <h5>Thành tích</h5>
+
+                        <ul>
+                          <li>Thời gian học : <span>4 tiếng 32 phút</span></li>
+                          <li>Số lần đã phát âm : <span>400 lần</span></li>
+                          <li>Số câu đã nói : <span>135 câu</span></li>
+                          <li>Tỉ lệ câu nói chuẩn xác: <span>85%</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-rank">
+                    <div class="card-rank--header"></div>
+
+                    <div class="card-rank--body">
+                      <div class="user__info">
+                        <div class="user__info--avt">
+                          <img src="assets/images/banner_main.png" alt="" />
+                        </div>
+                        <p>Tên ingame</p>
+                      </div>
+
+                      <div class="user__achievements">
+                        <h5>Thành tích</h5>
+
+                        <ul>
+                          <li>Thời gian học : <span>4 tiếng 32 phút</span></li>
+                          <li>Số lần đã phát âm : <span>400 lần</span></li>
+                          <li>Số câu đã nói : <span>135 câu</span></li>
+                          <li>Tỉ lệ câu nói chuẩn xác: <span>85%</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-rank">
+                    <div class="card-rank--header"></div>
+
+                    <div class="card-rank--body">
+                      <div class="user__info">
+                        <div class="user__info--avt">
+                          <img src="assets/images/banner_main.png" alt="" />
+                        </div>
+                        <p>Tên ingame</p>
+                      </div>
+
+                      <div class="user__achievements">
+                        <h5>Thành tích</h5>
+
+                        <ul>
+                          <li>Thời gian học : <span>4 tiếng 32 phút</span></li>
+                          <li>Số lần đã phát âm : <span>400 lần</span></li>
+                          <li>Số câu đã nói : <span>135 câu</span></li>
+                          <li>Tỉ lệ câu nói chuẩn xác: <span>85%</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="top-month-contents" class="tabs__contents--items">
+                <div class="grid-rank-table">
+                  <div class="card-rank">
+                    <div class="card-rank--header"></div>
+                    <div class="card-rank--body">
+                      <div class="user__info">
+                        <div class="user__info--avt">
+                          <img src="assets/images/banner_main.png" alt="" />
+                        </div>
+                        <p>Tên ingame</p>
+                      </div>
+
+                      <div class="user__achievements">
+                        <h5>Thành tích</h5>
+
+                        <ul>
+                          <li>Thời gian học : <span>4 tiếng 32 phút</span></li>
+                          <li>Số lần đã phát âm : <span>400 lần</span></li>
+                          <li>Số câu đã nói : <span>135 câu</span></li>
+                          <li>Tỉ lệ câu nói chuẩn xác: <span>85%</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-rank">
+                    <div class="card-rank--header"></div>
+
+                    <div class="card-rank--body">
+                      <div class="user__info">
+                        <div class="user__info--avt">
+                          <img src="assets/images/banner_main.png" alt="" />
+                        </div>
+                        <p>Tên ingame</p>
+                      </div>
+
+                      <div class="user__achievements">
+                        <h5>Thành tích</h5>
+
+                        <ul>
+                          <li>Thời gian học : <span>4 tiếng 32 phút</span></li>
+                          <li>Số lần đã phát âm : <span>400 lần</span></li>
+                          <li>Số câu đã nói : <span>135 câu</span></li>
+                          <li>Tỉ lệ câu nói chuẩn xác: <span>85%</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-rank">
+                    <div class="card-rank--header"></div>
+
+                    <div class="card-rank--body">
+                      <div class="user__info">
+                        <div class="user__info--avt">
+                          <img src="assets/images/banner_main.png" alt="" />
+                        </div>
+                        <p>Tên ingame</p>
+                      </div>
+
+                      <div class="user__achievements">
+                        <h5>Thành tích</h5>
+
+                        <ul>
+                          <li>Thời gian học : <span>4 tiếng 32 phút</span></li>
+                          <li>Số lần đã phát âm : <span>400 lần</span></li>
+                          <li>Số câu đã nói : <span>135 câu</span></li>
+                          <li>Tỉ lệ câu nói chuẩn xác: <span>85%</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="top-year-contents" class="tabs__contents--items">
+                <div class="grid-rank-table">
+                  <div class="card-rank">
+                    <div class="card-rank--header"></div>
+                    <div class="card-rank--body">
+                      <div class="user__info">
+                        <div class="user__info--avt">
+                          <img src="assets/images/banner_main.png" alt="" />
+                        </div>
+                        <p>Tên ingame</p>
+                      </div>
+
+                      <div class="user__achievements">
+                        <h5>Thành tích</h5>
+
+                        <ul>
+                          <li>Thời gian học : <span>4 tiếng 32 phút</span></li>
+                          <li>Số lần đã phát âm : <span>400 lần</span></li>
+                          <li>Số câu đã nói : <span>135 câu</span></li>
+                          <li>Tỉ lệ câu nói chuẩn xác: <span>85%</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-rank">
+                    <div class="card-rank--header"></div>
+
+                    <div class="card-rank--body">
+                      <div class="user__info">
+                        <div class="user__info--avt">
+                          <img src="assets/images/banner_main.png" alt="" />
+                        </div>
+                        <p>Tên ingame</p>
+                      </div>
+
+                      <div class="user__achievements">
+                        <h5>Thành tích</h5>
+
+                        <ul>
+                          <li>Thời gian học : <span>4 tiếng 32 phút</span></li>
+                          <li>Số lần đã phát âm : <span>400 lần</span></li>
+                          <li>Số câu đã nói : <span>135 câu</span></li>
+                          <li>Tỉ lệ câu nói chuẩn xác: <span>85%</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-rank">
+                    <div class="card-rank--header"></div>
+
+                    <div class="card-rank--body">
+                      <div class="user__info">
+                        <div class="user__info--avt">
+                          <img src="assets/images/banner_main.png" alt="" />
+                        </div>
+                        <p>Tên ingame</p>
+                      </div>
+
+                      <div class="user__achievements">
+                        <h5>Thành tích</h5>
+
+                        <ul>
+                          <li>Thời gian học : <span>4 tiếng 32 phút</span></li>
+                          <li>Số lần đã phát âm : <span>400 lần</span></li>
+                          <li>Số câu đã nói : <span>135 câu</span></li>
+                          <li>Tỉ lệ câu nói chuẩn xác: <span>85%</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="contents--footer">
-            <a href="" class="btn-register-receive-gifts">
-              Đăng kí nhận ưu đãi
-            </a>
+            <a href="" class="btn-more">Tìm hiểu thêm top tuaafn</a>
           </div>
         </div>
       </div>
-    </div>
 
-    <div id="introduce-app-book" class="section__items">
-      <div class="section__items--contents">
-        <div class="contents--header">
-          <p>Giới thiệu</p>
-          <h3>Trọn bộ sách và ứng dụng Betia English</h3>
-        </div>
-
-        <div class="contents--body">
-          <div class="tabs__header">
-            <button id="betia1-header" class="tabs__header--items tabs__header--active" onclick="tabOpen('betia1-header','betia1-contents')">
-              Betia English 1
-            </button>
-
-            <button id="betia2-header" class="tabs__header--items" onclick="tabOpen('betia2-header','betia2-contents')">
-              Betia English 2
-            </button>
+      <div id="difference-point" class="section__items difference-point">
+        <div class="section__items--contents">
+          <div class="contents--header">
+            <p>Điểm khác biệt</p>
+            <h3>Con yêu thích học tiếng Anh ngay từ khi mới bắt đầu</h3>
           </div>
-          <div class="tabs__contents">
-            <div id="betia1-contents" class="tabs__contents--items tabs__contents--active">
-              <div class="intro__items">
-                <div class="">
-                  <img src="assets/images/banner_main.png" alt="" />
-                </div>
-                <div class="intro__items--contents">
-                  <h3>Khởi động cuộc phiêu lưu</h3>
-                  <p>
-                    Sau khi nhập vai thành nhân vật chính, trở thành Linker -
-                    người hùng mang nhiệm vụ giải cứu thế giới Betia, học sinh
-                    được gặp gỡ nhiều nhân vật, trải qua nhiều câu chuyện thú
-                    vị khác nhau. Betia English 1 giúp học sinh bước đầu hình
-                    thành phản xạ tiếng Anh, chuẩn hoá phát âm và tăng cường
-                    sự tự tin trong giao tiếp.
-                  </p>
-                </div>
-              </div>
 
-              <div class="intro__items intro__items--revert">
-                <div class="intro__items--img">
+          <div class="contents--body">
+            <div class="card">
+              <div class="card__front">
+                <div class="card__front--title">
+                  <h3>
+                    Trải nghiệm nhập vai hấp dẫn - Học tiếng Anh như bước vào
+                    cuộc phiêu lưu
+                  </h3>
                   <div class="">
-                    <img src="assets/images/banner_main.png" alt="" />
-                  </div>
-                </div>
-                <div class="intro__items--contents">
-                  <h3>Tăng cường kỹ năng tiếng Anh nghe & nói</h3>
-                  <p>
-                    Gói học khởi động giúp học sinh hiểu được nội dung các hội
-                    thoại qua các từ vựng, mẫu câu ngắn; nghe hiểu cơ bản được
-                    cuộc hội thoại (3-5 từ/câu); có thể nói và viết các câu
-                    ngắn với các chunk được học (2-5 từ/câu).
-                  </p>
-                </div>
-              </div>
-
-              <div class="intro__items">
-                <div class="">
-                  <img src="assets/images/banner_main.png" alt="" />
-                </div>
-                <div class="intro__items--contents">
-                  <h3>Chỉ từ 30 phút mỗi ngày để tiến bộ</h3>
-                  <p>
-                    Lộ trình học được thiết kế bài bàn. Chỉ từ 30 phút mỗi
-                    ngày với "Nhiệm vụ học hôm nay" để phát triển toàn diện kỹ
-                    năng tiếng Anh giao tiếp. Phối hợp học cùng sách Betia
-                    Readers để tăng cường hiệu quả học tập.
-                  </p>
-                </div>
-              </div>
-
-              <div class="intro__button">
-                <a href="" class="btn-more">Tìm hiểu thêm</a>
-              </div>
-            </div>
-
-            <div id="betia2-contents" class="tabs__contents--items">
-              <div class="intro__items">
-                <div class="">
-                  <img src="assets/images/banner_main.png" alt="" />
-                </div>
-                <div class="intro__items--contents">
-                  <h3>Khởi động cuộc phiêu lưu</h3>
-                  <p>
-                    Sau khi nhập vai thành nhân vật chính, trở thành Linker -
-                    người hùng mang nhiệm vụ giải cứu thế giới Betia, học sinh
-                    được gặp gỡ nhiều nhân vật, trải qua nhiều câu chuyện thú
-                    vị khác nhau. Betia English 1 giúp học sinh bước đầu hình
-                    thành phản xạ tiếng Anh, chuẩn hoá phát âm và tăng cường
-                    sự tự tin trong giao tiếp.
-                  </p>
-                </div>
-              </div>
-
-              <div class="intro__items intro__items--revert">
-                <div class="intro__items--img">
-                  <div class="">
-                    <img src="assets/images/banner_main.png" alt="" />
-                  </div>
-                </div>
-                <div class="intro__items--contents">
-                  <h3>Tăng cường kỹ năng tiếng Anh nghe & nói</h3>
-                  <p>
-                    Gói học khởi động giúp học sinh hiểu được nội dung các hội
-                    thoại qua các từ vựng, mẫu câu ngắn; nghe hiểu cơ bản được
-                    cuộc hội thoại (3-5 từ/câu); có thể nói và viết các câu
-                    ngắn với các chunk được học (2-5 từ/câu).
-                  </p>
-                </div>
-              </div>
-
-              <div class="intro__items">
-                <div class="">
-                  <img src="assets/images/banner_main.png" alt="" />
-                </div>
-                <div class="intro__items--contents">
-                  <h3>Chỉ từ 30 phút mỗi ngày để tiến bộ 11</h3>
-                  <p>
-                    Lộ trình học được thiết kế bài bàn. Chỉ từ 30 phút mỗi
-                    ngày với "Nhiệm vụ học hôm nay" để phát triển toàn diện kỹ
-                    năng tiếng Anh giao tiếp. Phối hợp học cùng sách Betia
-                    Readers để tăng cường hiệu quả học tập.
-                  </p>
-                </div>
-              </div>
-
-              <div class="intro__button">
-                <a href="" class="btn-more">Tìm hiểu thêm</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="contents--footer"></div>
-      </div>
-    </div>
-
-    <div id="rank-table" class="section__items rank-table">
-      <div class="section__items--contents">
-        <div class="contents--header">
-          <p>Top học sinh</p>
-          <h3>Betia English - bảng vinh danh</h3>
-        </div>
-
-        <div class="contents--body">
-          <div class="tabs__header">
-            <button id="top-week-header" class="tabs__header--items tabs__header--active" onclick="tabOpen('top-week-header','top-week-contents')">
-              Top tuần
-            </button>
-
-            <button id="top-month-header" class="tabs__header--items" onclick="tabOpen('top-month-header','top-month-contents')">
-              Top tuần
-            </button>
-
-            <button id="top-year-header" class="tabs__header--items" onclick="tabOpen('top-year-header','top-year-contents')">
-              Top tháng
-            </button>
-          </div>
-          <div class="tabs__contents">
-            <div id="top-week-contents" class="tabs__contents--items tabs__contents--active">
-
-              <div class="grid-rank-table">
-                <div class="card-rank">
-                  <div class="card-rank--header"></div>
-                  <div class="card-rank--body">
-                    <div class="user__info">
-                      <div class="user__info--avt">
-                        <img src="assets/images/banner_main.png" alt="">
-                      </div>
-                      <p>Tên ingame</p>
-                    </div>
-
-                    <div class="user__achievements">
-                      <h5>Thành tích</h5>
-
-                      <ul>
-                        <li>Thời gian học : <span>4 tiếng 32 phút</span></li>
-                        <li>Số lần đã phát âm : <span>400 lần</span></li>
-                        <li>Số câu đã nói : <span>135 câu</span></li>
-                        <li>Tỉ lệ câu nói chuẩn xác: <span>85%</span></li>
-                      </ul>
-                    </div>
+                    <img src="assets/images/ic_add.png" alt="" />
                   </div>
                 </div>
 
-                <div class="card-rank">
-                  <div class="card-rank--header"></div>
-
-                  <div class="card-rank--body">
-
-                    <div class="user__info">
-                      <div class="user__info--avt">
-                        <img src="assets/images/banner_main.png" alt="">
-                      </div>
-                      <p>Tên ingame</p>
-                    </div>
-
-                    <div class="user__achievements">
-                      <h5>Thành tích</h5>
-
-                      <ul>
-                        <li>Thời gian học : <span>4 tiếng 32 phút</span></li>
-                        <li>Số lần đã phát âm : <span>400 lần</span></li>
-                        <li>Số câu đã nói : <span>135 câu</span></li>
-                        <li>Tỉ lệ câu nói chuẩn xác: <span>85%</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card-rank">
-                  <div class="card-rank--header"></div>
-
-                  <div class="card-rank--body">
-
-                    <div class="user__info">
-                      <div class="user__info--avt">
-                        <img src="assets/images/banner_main.png" alt="">
-                      </div>
-                      <p>Tên ingame</p>
-                    </div>
-
-                    <div class="user__achievements">
-                      <h5>Thành tích</h5>
-
-                      <ul>
-                        <li>Thời gian học : <span>4 tiếng 32 phút</span></li>
-                        <li>Số lần đã phát âm : <span>400 lần</span></li>
-                        <li>Số câu đã nói : <span>135 câu</span></li>
-                        <li>Tỉ lệ câu nói chuẩn xác: <span>85%</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="top-month-contents" class="tabs__contents--items">
-              <div class="grid-rank-table">
-                <div class="card-rank">
-                  <div class="card-rank--header"></div>
-                  <div class="card-rank--body">
-                    <div class="user__info">
-                      <div class="user__info--avt">
-                        <img src="assets/images/banner_main.png" alt="">
-                      </div>
-                      <p>Tên ingame</p>
-                    </div>
-
-                    <div class="user__achievements">
-                      <h5>Thành tích</h5>
-
-                      <ul>
-                        <li>Thời gian học : <span>4 tiếng 32 phút</span></li>
-                        <li>Số lần đã phát âm : <span>400 lần</span></li>
-                        <li>Số câu đã nói : <span>135 câu</span></li>
-                        <li>Tỉ lệ câu nói chuẩn xác: <span>85%</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card-rank">
-                  <div class="card-rank--header"></div>
-
-                  <div class="card-rank--body">
-
-                    <div class="user__info">
-                      <div class="user__info--avt">
-                        <img src="assets/images/banner_main.png" alt="">
-                      </div>
-                      <p>Tên ingame</p>
-                    </div>
-
-                    <div class="user__achievements">
-                      <h5>Thành tích</h5>
-
-                      <ul>
-                        <li>Thời gian học : <span>4 tiếng 32 phút</span></li>
-                        <li>Số lần đã phát âm : <span>400 lần</span></li>
-                        <li>Số câu đã nói : <span>135 câu</span></li>
-                        <li>Tỉ lệ câu nói chuẩn xác: <span>85%</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card-rank">
-                  <div class="card-rank--header"></div>
-
-                  <div class="card-rank--body">
-
-                    <div class="user__info">
-                      <div class="user__info--avt">
-                        <img src="assets/images/banner_main.png" alt="">
-                      </div>
-                      <p>Tên ingame</p>
-                    </div>
-
-                    <div class="user__achievements">
-                      <h5>Thành tích</h5>
-
-                      <ul>
-                        <li>Thời gian học : <span>4 tiếng 32 phút</span></li>
-                        <li>Số lần đã phát âm : <span>400 lần</span></li>
-                        <li>Số câu đã nói : <span>135 câu</span></li>
-                        <li>Tỉ lệ câu nói chuẩn xác: <span>85%</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="top-year-contents" class="tabs__contents--items">
-              <div class="grid-rank-table">
-                <div class="card-rank">
-                  <div class="card-rank--header"></div>
-                  <div class="card-rank--body">
-                    <div class="user__info">
-                      <div class="user__info--avt">
-                        <img src="assets/images/banner_main.png" alt="">
-                      </div>
-                      <p>Tên ingame</p>
-                    </div>
-
-                    <div class="user__achievements">
-                      <h5>Thành tích</h5>
-
-                      <ul>
-                        <li>Thời gian học : <span>4 tiếng 32 phút</span></li>
-                        <li>Số lần đã phát âm : <span>400 lần</span></li>
-                        <li>Số câu đã nói : <span>135 câu</span></li>
-                        <li>Tỉ lệ câu nói chuẩn xác: <span>85%</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card-rank">
-                  <div class="card-rank--header"></div>
-
-                  <div class="card-rank--body">
-
-                    <div class="user__info">
-                      <div class="user__info--avt">
-                        <img src="assets/images/banner_main.png" alt="">
-                      </div>
-                      <p>Tên ingame</p>
-                    </div>
-
-                    <div class="user__achievements">
-                      <h5>Thành tích</h5>
-
-                      <ul>
-                        <li>Thời gian học : <span>4 tiếng 32 phút</span></li>
-                        <li>Số lần đã phát âm : <span>400 lần</span></li>
-                        <li>Số câu đã nói : <span>135 câu</span></li>
-                        <li>Tỉ lệ câu nói chuẩn xác: <span>85%</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card-rank">
-                  <div class="card-rank--header"></div>
-
-                  <div class="card-rank--body">
-
-                    <div class="user__info">
-                      <div class="user__info--avt">
-                        <img src="assets/images/banner_main.png" alt="">
-                      </div>
-                      <p>Tên ingame</p>
-                    </div>
-
-                    <div class="user__achievements">
-                      <h5>Thành tích</h5>
-
-                      <ul>
-                        <li>Thời gian học : <span>4 tiếng 32 phút</span></li>
-                        <li>Số lần đã phát âm : <span>400 lần</span></li>
-                        <li>Số câu đã nói : <span>135 câu</span></li>
-                        <li>Tỉ lệ câu nói chuẩn xác: <span>85%</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="contents--footer">
-          <a href="" class="btn-more">Tìm hiểu thêm top tuaafn</a>
-        </div>
-      </div>
-    </div>
-
-    <div id="difference-point" class="section__items difference-point">
-      <div class="section__items--contents">
-        <div class="contents--header">
-          <p>Điểm khác biệt</p>
-          <h3>Con yêu thích học tiếng Anh ngay từ khi mới bắt đầu</h3>
-        </div>
-
-        <div class="contents--body">
-          <div class="card">
-            <div class="card__front">
-              <div class="card__front--title">
-                <h3>Trải nghiệm nhập vai hấp dẫn - Học tiếng Anh như bước vào cuộc phiêu lưu</h3>
-                <div class="">
-                  <img src="assets/images/ic_add.png" alt="">
-                </div>
-              </div>
-
-              <!-- <div class="card__front--desc">
+                <!-- <div class="card__front--desc">
                 <p> <i>Từ thiếu hứng thú với bộ môn tiếng Anh, bé Sam nhà mình đã chủ động "đòi" ba mẹ cho học mỗi ngày với Betia English. Chỉ sau 30 ngày kiên trì, mình đã cảm nhận được những thay đổi rõ rệt ở con: Phát âm chuẩn hơn, tự tin hơn, ghi nhớ thêm nhiều từ vựng và không còn sợ các cuộc hội thoại tiếng Anh trong đời sống."</i></p>
                 <p>Chị Hằng, mẹ bé Sam 10 tuổi đang cho con sử dụng Betia English.</p>
               </div> -->
+              </div>
+              <div class="card__back">
+                <img src="assets/images/card_img_1.jpg" alt="" />
+              </div>
             </div>
-            <div class="card__back">
-              <img src="assets/images/card_img_1.jpg" alt="">
+
+            <div class="card">
+              <div class="card__front">
+                <div class="card__front--title">
+                  <h3>
+                    Trải nghiệm nhập vai hấp dẫn - Học tiếng Anh như bước vào
+                    cuộc phiêu lưu
+                  </h3>
+                  <div class="">
+                    <img src="assets/images/ic_add.png" alt="" />
+                  </div>
+                </div>
+
+                <!-- <div class="card__front--desc">
+                <p> <i>Từ thiếu hứng thú với bộ môn tiếng Anh, bé Sam nhà mình đã chủ động "đòi" ba mẹ cho học mỗi ngày với Betia English. Chỉ sau 30 ngày kiên trì, mình đã cảm nhận được những thay đổi rõ rệt ở con: Phát âm chuẩn hơn, tự tin hơn, ghi nhớ thêm nhiều từ vựng và không còn sợ các cuộc hội thoại tiếng Anh trong đời sống."</i></p>
+                <p>Chị Hằng, mẹ bé Sam 10 tuổi đang cho con sử dụng Betia English.</p>
+              </div> -->
+              </div>
+              <div class="card__back">
+                <img src="assets/images/card_img_1.jpg" alt="" />
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card__front">
+                <div class="card__front--title">
+                  <h3>
+                    Trải nghiệm nhập vai hấp dẫn - Học tiếng Anh như bước vào
+                    cuộc phiêu lưu
+                  </h3>
+                  <div class="">
+                    <img src="assets/images/ic_add.png" alt="" />
+                  </div>
+                </div>
+
+                <!-- <div class="card__front--desc">
+                <p> <i>Từ thiếu hứng thú với bộ môn tiếng Anh, bé Sam nhà mình đã chủ động "đòi" ba mẹ cho học mỗi ngày với Betia English. Chỉ sau 30 ngày kiên trì, mình đã cảm nhận được những thay đổi rõ rệt ở con: Phát âm chuẩn hơn, tự tin hơn, ghi nhớ thêm nhiều từ vựng và không còn sợ các cuộc hội thoại tiếng Anh trong đời sống."</i></p>
+                <p>Chị Hằng, mẹ bé Sam 10 tuổi đang cho con sử dụng Betia English.</p>
+              </div> -->
+              </div>
+              <div class="card__back">
+                <img src="assets/images/card_img_1.jpg" alt="" />
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card__front">
+                <div class="card__front--title">
+                  <h3>
+                    Trải nghiệm nhập vai hấp dẫn - Học tiếng Anh như bước vào
+                    cuộc phiêu lưu
+                  </h3>
+                  <div class="">
+                    <img src="assets/images/ic_add.png" alt="" />
+                  </div>
+                </div>
+
+                <!-- <div class="card__front--desc">
+                <p> <i>Từ thiếu hứng thú với bộ môn tiếng Anh, bé Sam nhà mình đã chủ động "đòi" ba mẹ cho học mỗi ngày với Betia English. Chỉ sau 30 ngày kiên trì, mình đã cảm nhận được những thay đổi rõ rệt ở con: Phát âm chuẩn hơn, tự tin hơn, ghi nhớ thêm nhiều từ vựng và không còn sợ các cuộc hội thoại tiếng Anh trong đời sống."</i></p>
+                <p>Chị Hằng, mẹ bé Sam 10 tuổi đang cho con sử dụng Betia English.</p>
+              </div> -->
+              </div>
+              <div class="card__back">
+                <img src="assets/images/card_img_1.jpg" alt="" />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    </div>
-  </section>
 
-  <script src="./assets/js/jquery-3.7.1.min.js"></script>
-  <script src="./assets/js/main.js"></script>
-  <script src="./assets/js/slick.min.js"></script>
-</body>
+      <div id="news-events" class="section__items">
+        <div class="section__items--contents">
+          <div class="contents--header">
+            <p>Betia English</p>
+            <h3>Tin tức sự kiện</h3>
+          </div>
+          <div class="contents--body">
+            <div class="news--grid-layout">
+              <div class="news__card">
+                <img
+                  src="https://i0.wp.com/drjennie.com/wp-content/uploads/2022/01/Betia-Ann-Init_12-15-21.jpg?fit=750%2C450&ssl=1"
+                  alt=""
+                />
+                <div class="news__card--detail">
+                  <div class="">
+                    <p>
+                      Nổi bật
+                      <!-- <i class="fa fa-solid fa-circle fa-1x"></i> -->
+                    </p>
+                    <h3>
+                      Betia Family's day: giúp con làm chủ kỹ năng anh ngữ✌
+                    </h3>
+                  </div>
 
+                  <div class="date-posted">
+                    <p>12.26.2023</p>
+                    <div class="space"></div>
+                    <p><i class="fa fa-eye"></i> 250</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="news__card">
+                <img
+                  src="https://i0.wp.com/drjennie.com/wp-content/uploads/2022/01/Betia-Ann-Init_12-15-21.jpg?fit=750%2C450&ssl=1"
+                  alt=""
+                />
+                <div class="news__card--detail">
+                  <div class="">
+                    <p>
+                      Nổi bật
+                      <!-- <i class="fa fa-solid fa-circle fa-1x"></i> -->
+                    </p>
+                    <h3>
+                      Betia Family's day: giúp con làm chủ kỹ năng anh ngữ✌
+                    </h3>
+                  </div>
+
+                  <div class="date-posted">
+                    <p>12.26.2023</p>
+                    <div class="space"></div>
+                    <p><i class="fa fa-eye"></i> 250</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="news__card">
+                <img
+                  src="https://i0.wp.com/drjennie.com/wp-content/uploads/2022/01/Betia-Ann-Init_12-15-21.jpg?fit=750%2C450&ssl=1"
+                  alt=""
+                />
+                <div class="news__card--detail">
+                  <div class="">
+                    <p>
+                      Nổi bật
+                      <!-- <i class="fa fa-solid fa-circle fa-1x"></i> -->
+                    </p>
+                    <h3>
+                      Betia Family's day: giúp con làm chủ kỹ năng anh ngữ✌
+                    </h3>
+                  </div>
+
+                  <div class="date-posted">
+                    <p>12.26.2023</p>
+                    <div class="space"></div>
+                    <p><i class="fa fa-eye"></i> 250</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contents--footer">
+            <a href="" class="btn-more">Tìm hiểu thêm</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="list-package" class="section__items">
+        <div class="section__items--contents">
+          <div class="contents--body">
+            <div class="img_child_package">
+              <img src="assets/images/img_child_package.png" alt="" />
+            </div>
+
+            <div class="table-package">
+              <div class="table-package--contents">
+                <div class="table-package--header">
+                  <p>Trải nghiệm Betia English ngay hôm nay</p>
+                  <h3>Cùng con vui học tiếng Anh mỗi ngày ba mẹ nhé!</h3>
+                </div>
+
+                <div class="table-package--body">
+                  <div class="package">
+                    <div class="package--header">
+                      <h3>Betia English (1) 365 ngày</h3>
+                      <p>Sử dụng Betia English 1 365 ngày không giới hạn</p>
+                    </div>
+
+                    <div class="package--body">
+                      <h3>1.600.000vnđ</h3>
+                      <p>Ưu đãi còn 18:20:20</p>
+                      <strike>1.120.000vnđ</strike>
+                    </div>
+
+                    <div class="package--footer">
+                      <a href="">Xem chi tiết</a>
+                      <a href="" class="btn-base-primary-large">
+                        <i class="fa fa-solid fa-shopping-bag"></i>Mua gói
+                        học</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="package">
+                    <div class="package--header">
+                      <h3>Betia English (1) 365 ngày</h3>
+                      <p>Sử dụng Betia English 1 365 ngày không giới hạn</p>
+                    </div>
+
+                    <div class="package--body">
+                      <h3>1.600.000vnđ</h3>
+                      <p>Ưu đãi còn 18:20:20</p>
+                      <strike>1.120.000vnđ</strike>
+                    </div>
+
+                    <div class="package--footer">
+                      <a href="">Xem chi tiết</a>
+                      <a href="" class="btn-base-primary-large">
+                        <i class="fa fa-solid fa-shopping-bag"></i>Mua gói
+                        học</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="package">
+                    <div class="package--header">
+                      <h3>Betia English (1) 365 ngày</h3>
+                      <p>Sử dụng Betia English 1 365 ngày không giới hạn</p>
+                    </div>
+
+                    <div class="package--body">
+                      <h3>1.600.000vnđ</h3>
+                      <p>Ưu đãi còn 18:20:20</p>
+                      <strike>1.120.000vnđ</strike>
+                    </div>
+
+                    <div class="package--footer">
+                      <a href="">Xem chi tiết</a>
+                      <a href="" class="btn-base-primary-large">
+                        <i class="fa fa-solid fa-shopping-bag"></i>Mua gói
+                        học</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="package">
+                    <div class="package--header">
+                      <h3>Betia English (1) 365 ngày</h3>
+                      <p>Sử dụng Betia English 1 365 ngày không giới hạn</p>
+                    </div>
+
+                    <div class="package--body">
+                      <h3>1.600.000vnđ</h3>
+                      <p>Ưu đãi còn 18:20:20</p>
+                      <strike>1.120.000vnđ</strike>
+                    </div>
+
+                    <div class="package--footer">
+                      <a href="">Xem chi tiết</a>
+                      <a href="" class="btn-base-primary-large">
+                        <i class="fa fa-solid fa-shopping-bag"></i>Mua gói
+                        học</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+  </body>
 </html>

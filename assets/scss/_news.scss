@@ -120,33 +120,3 @@
     background-color: #b8bbbe;
   }
 }
-
-.tabs {
-  &__header {
-    display: flex;
-    gap: 1.5rem;
-    padding: 2rem 0;
-    &--items {
-      padding: 6px 20px;
-      border-radius: 65px;
-      background: #f8f8f8;
-      line-height: 28px;
-    }
-
-    &--active {
-      background: #36bdf8;
-      font-weight: bold;
-      color: white;
-    }
-  }
-
-  &__contents {
-    &--items {
-      display: none;
-    }
-
-    &--active {
-      display: block;
-    }
-  }
-}
