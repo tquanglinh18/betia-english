@@ -14,6 +14,10 @@
 
 @import "_home";
 
+@import "_betia-1";
+
+@import "_audio-book";
+
 $btnBasePrimaryColor: #36bdf8;
 $btnBaseSecondaryColor: #dadada;
 $whiteColor: #ffffff;
@@ -57,6 +61,30 @@ $pageHeaderTitleColor: #121d26;
   text-align: center;
   font-style: normal !important;
   font-size: 16px;
+  @include flex-row-center();
+  gap: 1rem;
+  @include tablet {
+    padding: 1.25rem;
+    font-size: 20px;
+  }
+  @include desktop {
+    padding: 1.5rem;
+    font-size: 20px !important;
+  }
+  i {
+    margin-right: 1rem;
+  }
+}
+
+.btn-base-orange-large {
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  @include flex-row-center();
+  border-radius: 50px;
+  background: #ff6000;
+  color: $whiteColor;
+  gap: 1rem;
+
   @include tablet {
     padding: 1.25rem;
     font-size: 20px;

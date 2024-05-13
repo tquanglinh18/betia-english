@@ -20,7 +20,21 @@ $(function () {
     prevArrow: false,
     nextArrow: false,
   });
+
+  $('#btn-play').click(()=> {
+    $("#story-1")[0].play();
+    $("#time--current").html($("#story-1")[0].currentTime)
+  });
+
+  $('#btn-pause').click(()=> {
+    $("#story-1")[0].pause();
+  });
+
+  $('#btn-replay').click(()=> {
+    $("#story-1")[0].pause().load().play();
+  });
 });
+
 
 function showSubMenu(id) {
   var idSubmenuSelected = "#" + id + "-sub-menu";
@@ -65,3 +79,5 @@ function tabOpen(idSection, idHeaderSelected, idContentSelected) {
   $(idHeaderSelectedQuerry).addClass("tabs__header--active");
   $(idContentSelectedQuerry).show().addClass("tabs__contents--active");
 }
+
+

@@ -1305,6 +1305,117 @@ header #ic-menu-mobile img {
   text-align: center;
 }
 
+#intro-betia1 {
+  width: 100%;
+  position: relative;
+}
+@media (min-width: 768px) {
+  #intro-betia1 .introduction {
+    background-size: auto 100%;
+  }
+}
+#intro-betia1 .introduction__contents {
+  width: 100%;
+  max-width: 1200px;
+  padding: 10% 2rem;
+  margin-right: auto;
+  margin-left: auto;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#intro-betia1 .introduction__contents--title h3 {
+  font-size: 44px;
+}
+#intro-betia1 .introduction__contents--title h1 {
+  text-shadow: 12px 12px 12px rgba(32, 106, 210, 0.8980392157);
+  font-size: 80px;
+}
+#intro-betia1 .introduction__contents--option {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+#intro-betia1 .introduction__contents--option a {
+  width: 100%;
+  max-width: none;
+}
+
+.audio-story {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex: 0 1 0;
+}
+.audio-story--img {
+  height: 65px;
+  width: 84px;
+  border-radius: 10px;
+}
+.audio-story--img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.audio-story--title {
+  flex-grow: 1;
+}
+.audio-story--title p {
+  color: #596167;
+  line-height: 150%;
+}
+.audio-story--title h3 {
+  color: #121d26;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 160%;
+}
+.audio-story--controller {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.audio-story--controller img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+.audio-story--controller p {
+  min-width: 86px;
+  text-align: center;
+  font-size: 20px;
+}
+.audio-story--controller p span {
+  font-weight: bold;
+}
+.audio-story--controller button {
+  width: 40px;
+  height: 40px;
+  aspect-ratio: 1/1;
+}
+.audio-story--controller > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 .btn-base-primary {
   padding: 0.5rem 1rem;
   background-color: #36bdf8;
@@ -1327,6 +1438,11 @@ header #ic-menu-mobile img {
   text-align: center;
   font-style: normal !important;
   font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 @media (min-width: 768px) {
   .btn-base-primary-large {
@@ -1341,6 +1457,34 @@ header #ic-menu-mobile img {
   }
 }
 .btn-base-primary-large i {
+  margin-right: 1rem;
+}
+
+.btn-base-orange-large {
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background: #ff6000;
+  color: #ffffff;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .btn-base-orange-large {
+    padding: 1.25rem;
+    font-size: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .btn-base-orange-large {
+    padding: 1.5rem;
+    font-size: 20px !important;
+  }
+}
+.btn-base-orange-large i {
   margin-right: 1rem;
 }
 

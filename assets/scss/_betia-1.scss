@@ -1,0 +1,60 @@
+@import "responsive";
+
+@mixin flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#intro-betia1 {
+  width: 100%;
+  position: relative;
+  .introduction {
+    @include tablet {
+      background-size: auto 100%;
+    }
+    &__contents {
+      width: 100%;
+      max-width: 1200px;
+      padding: 10% 2rem;
+      margin-right: auto;
+      margin-left: auto;
+      color: #fff;
+      font-weight: bold;
+      @include flex-col-center();
+      text-align: center;
+      gap: 3rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      &--title {
+        h3 {
+          font-size: 44px;
+        }
+        h1 {
+          text-shadow: 12px 12px 12px #206ad2e5;
+          font-size: 80px;
+        }
+      }
+      &--option {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        width: 100%;
+        a {
+          width: 100%;
+          max-width: none;
+        }
+      }
+    }
+  }
+}
