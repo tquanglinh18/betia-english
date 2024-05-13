@@ -17,15 +17,16 @@
     />
   </head>
 
-  <body>
+  <body style="background-color: #f8f8f8">
     <section class="page__container">
       <div class="page__header">
         <img src="./assets/images/ic_header_news.png" alt="" />
-        <h1>Hướng dẫn Betia</h1>
+        <h1>Tài liệu học tập</h1>
       </div>
 
+      <div class="" id="guide-contents"></div>
       <div class="" id="document-learning">
-        <div class="tabs__header">
+        <div class="tabs__header" style="padding-top: 0">
           <button
             id="audio-header"
             class="tabs__header--items tabs__header--active"
@@ -47,41 +48,117 @@
             id="audio-contents"
             class="tabs__contents--items tabs__contents--active"
           >
-            <div class="list-audio">
-              <div class="audio-story">
-                <div class="audio-story--img">
-                  <img src="./assets/images/banner_main.png" alt="" />
-                </div>
+            <div class="audio__filter">
+              <div class="audio__filter--count">
+                <p>Tất cả <span>112</span> Cube 1.1</p>
+              </div>
+              <div class="audio__filter--button"></div>
+            </div>
+            <div class="audio__list">
+              <div class="story">
+                <div class="story__contents">
+                  <div class="story__contents--img">
+                    <img src="./assets/images/banner_main.png" alt="" />
+                  </div>
 
-                <div class="audio-story--title">
-                  <p>Story 1</p>
-                  <h3>Welcome to Betia!</h3>
-                </div>
+                  <div class="story__contents--title">
+                    <p>Story 1</p>
+                    <h3>Welcome to Betia!</h3>
+                  </div>
 
-                <div class="audio-story--controller">
-                  <div class="">
-                    <p>
-                      <span id="time--current">0:17</span> |
-                      <span id="time--total">2:22</span>
-                    </p>
-                    <button id="btn-replay" type="submit">
-                      <img src="./assets/images/ic_replay.png" alt="" />
-                    </button>
+                  <div class="story__contents--controller">
+                    <div class="">
+                      <p>
+                        <span id="time--current">0:17</span> |
+                        <span id="time--total">2:22</span>
+                      </p>
+                      <button id="btn-replay" type="submit">
+                        <img src="./assets/images/ic_replay.png" alt="" />
+                      </button>
 
-                    <button id="btn-pause" type="submit">
-                      <img src="./assets/images/ic_pause.png" alt="" />
+                      <button id="btn-pause" type="submit">
+                        <img src="./assets/images/ic_pause.png" alt="" />
+                      </button>
+                    </div>
+                    <button id="btn-play" type="submit">
+                      <img src="./assets/images/ic_play.png" alt="" />
                     </button>
                   </div>
-                  <button id="btn-play" type="submit">
-                    <img src="./assets/images/ic_play.png" alt="" />
-                  </button>
                 </div>
+
+                <div class="story__progress-time"></div>
+                <div class="story__divider"></div>
               </div>
-              <audio
-              id="story-1"
-                controls
-                src="https://media.geeksforgeeks.org/wp-content/uploads/20230524142525/gfg_offline_classes_en.mp3"
-              ></audio>
+
+              <div class="story">
+                <div class="story__contents">
+                  <div class="story__contents--img">
+                    <img src="./assets/images/banner_main.png" alt="" />
+                  </div>
+
+                  <div class="story__contents--title">
+                    <p>Story 1</p>
+                    <h3>Welcome to Betia!</h3>
+                  </div>
+
+                  <div class="story__contents--controller">
+                    <div class="">
+                      <p>
+                        <span id="time--current">0:17</span> |
+                        <span id="time--total">2:22</span>
+                      </p>
+                      <button id="btn-replay" type="submit">
+                        <img src="./assets/images/ic_replay.png" alt="" />
+                      </button>
+
+                      <button id="btn-pause" type="submit">
+                        <img src="./assets/images/ic_pause.png" alt="" />
+                      </button>
+                    </div>
+                    <button id="btn-play" type="submit">
+                      <img src="./assets/images/ic_play.png" alt="" />
+                    </button>
+                  </div>
+                </div>
+
+                <div class="story__progress-time"></div>
+                <div class="story__divider"></div>
+              </div>
+
+              <div class="story">
+                <div class="story__contents">
+                  <div class="story__contents--img">
+                    <img src="./assets/images/banner_main.png" alt="" />
+                  </div>
+
+                  <div class="story__contents--title">
+                    <p>Story 1</p>
+                    <h3>Welcome to Betia!</h3>
+                  </div>
+
+                  <div class="story__contents--controller">
+                    <div class="">
+                      <p>
+                        <span id="time--current">0:17</span> |
+                        <span id="time--total">2:22</span>
+                      </p>
+                      <button id="btn-replay" type="submit">
+                        <img src="./assets/images/ic_replay.png" alt="" />
+                      </button>
+
+                      <button id="btn-pause" type="submit">
+                        <img src="./assets/images/ic_pause.png" alt="" />
+                      </button>
+                    </div>
+                    <button id="btn-play" type="submit">
+                      <img src="./assets/images/ic_play.png" alt="" />
+                    </button>
+                  </div>
+                </div>
+
+                <div class="story__progress-time"></div>
+                <div class="story__divider"></div>
+              </div>
             </div>
           </div>
 

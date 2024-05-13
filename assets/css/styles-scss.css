@@ -1351,69 +1351,109 @@ header #ic-menu-mobile img {
   max-width: none;
 }
 
-.audio-story {
+.story {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+.story__contents {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   flex: 0 1 0;
+  width: 100%;
 }
-.audio-story--img {
+.story__contents--img {
   height: 65px;
   width: 84px;
   border-radius: 10px;
 }
-.audio-story--img img {
+.story__contents--img img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
 }
-.audio-story--title {
+.story__contents--title {
   flex-grow: 1;
 }
-.audio-story--title p {
+.story__contents--title p {
   color: #596167;
   line-height: 150%;
 }
-.audio-story--title h3 {
+.story__contents--title h3 {
   color: #121d26;
   font-size: 20px;
   font-weight: bold;
   line-height: 160%;
 }
-.audio-story--controller {
+.story__contents--controller {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
-.audio-story--controller img {
+.story__contents--controller img {
   width: 100%;
   object-fit: cover;
   aspect-ratio: 1/1;
 }
-.audio-story--controller p {
+.story__contents--controller p {
   min-width: 86px;
   text-align: center;
   font-size: 20px;
 }
-.audio-story--controller p span {
+.story__contents--controller p span {
   font-weight: bold;
 }
-.audio-story--controller button {
+.story__contents--controller button {
   width: 40px;
   height: 40px;
   aspect-ratio: 1/1;
 }
-.audio-story--controller > div {
+.story__contents--controller > div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+.story__divider {
+  background-color: #e7e8e9;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  height: 1.5px;
+}
+.story:last-child .story__divider {
+  height: 0px;
+}
+
+#audio-contents .audio__filter {
+  margin-bottom: 2rem;
+}
+#audio-contents .audio__filter p {
+  font-weight: bold;
+}
+#audio-contents .audio__filter p span {
+  color: #36bdf8;
+}
+#audio-contents .audio__list {
+  border-radius: 50px;
+  padding: 2rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
 }
 
 .btn-base-primary {

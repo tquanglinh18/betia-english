@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Betia English</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/styles-scss.css" />
+    <link rel="stylesheet" href="./assets/css/slick.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/assets/images/logo_betia.png"
+    />
+  </head>
+
+  <body style="background-color: #f8f8f8">
+    <section class="page__container">
+      <div class="page__header">
+        <img src="./assets/images/ic_header_news.png" alt="" />
+        <h1>FAQ</h1>
+      </div>
+
+      <div class="" id="guide-contents">
+        <div class="tabs__header" style="padding-top: 0">
+          <button
+            id="account-header"
+            class="tabs__header--items tabs__header--active"
+            onclick="tabOpen('guide-contents','account-header','account-contents')"
+          >
+            Tài khoản
+          </button>
+
+          <button
+            id="betia-app-header"
+            class="tabs__header--items"
+            onclick="tabOpen('guide-contents','betia-app-header','betia-app-contents')"
+          >
+            Betia English
+          </button>
+
+          <button
+            id="betia-book-header"
+            class="tabs__header--items"
+            onclick="tabOpen('guide-contents','betia-book-header','betia-book-contents')"
+          >
+            Sách Betia English
+          </button>
+
+          <button
+            id="buy-prod-header"
+            class="tabs__header--items"
+            onclick="tabOpen('guide-contents','buy-prod-header','buy-prod-contents')"
+          >
+            Mua hàng
+          </button>
+        </div>
+        <div class="tabs__contents">
+          <div
+            id="account-contents"
+            class="tabs__contents--items tabs__contents--active"
+          >
+            account
+          </div>
+
+          <div id="betia-app-contents" class="tabs__contents--items">
+            bnetia english
+          </div>
+
+          <div id="betia-book-contents" class="tabs__contents--items">
+            sách betia
+          </div>
+
+          <div id="buy-prod-contents" class="tabs__contents--items">
+            Mua hangfx
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+  </body>
+</html>
