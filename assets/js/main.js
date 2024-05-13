@@ -18,7 +18,7 @@ $(function () {
     autoplay: true,
     autoplaySpeed: 5000,
     prevArrow: false,
-    nextArrow: false
+    nextArrow: false,
   });
 });
 
@@ -42,17 +42,22 @@ function showMenuMobile() {
   }
 }
 
-function tabOpen(idHeaderSelected, idContentSelected) {
+function tabOpen(idSection, idHeaderSelected, idContentSelected) {
   var tabContent, tabHeader;
   var idHeaderSelectedQuerry = "#" + idHeaderSelected;
   var idContentSelectedQuerry = "#" + idContentSelected;
 
-  tabContent = $(".tabs__contents--items");
+  var idAllHeaderInSection = "#" + idSection + " .tabs__header--items";
+  var idAllContentsInSection = "#" + idSection + " .tabs__contents--items";
+  console.log("idAllContentsInSection: ", idAllContentsInSection);
+  tabContent = $(idAllContentsInSection);
   tabContent.each((index, value) => {
     $(value).hide();
+
+    console.log("value: ", $(value));
   });
 
-  tabHeader = $(".tabs__header--items");
+  tabHeader = $(idAllHeaderInSection);
   tabHeader.each((index, value) => {
     $(value).removeClass("tabs__header--active");
   });
