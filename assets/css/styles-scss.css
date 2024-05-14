@@ -1424,6 +1424,12 @@ header #ic-menu-mobile img {
   align-items: center;
   gap: 1rem;
 }
+.story__contents #btn-pause {
+  display: none;
+}
+.story__contents .progress-time {
+  display: none;
+}
 .story__divider {
   background-color: #e7e8e9;
   width: 70%;

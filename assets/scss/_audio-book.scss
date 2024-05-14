@@ -84,6 +84,14 @@ $pageHeaderTitleColor: #121d26;
         gap: 1rem;
       }
     }
+
+    #btn-pause {
+      display: none;
+    }
+
+    .progress-time {
+      display: none;
+    }
   }
   &__divider {
     background-color: #e7e8e9;
