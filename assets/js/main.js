@@ -24,6 +24,36 @@ $(function () {
   // initControlsAudio("story-3");
 
   initActionFAQ();
+
+  $("#card-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    asNavFor: "#card-nav",
+    cssEase: "linear",
+    infinite: true,
+    prevArrow: false,
+    nextArrow: false,
+  });
+
+  var cardItemNavLength = $("#card-nav > div").length;
+
+  $("#card-nav").slick({
+    slidesToShow: cardItemNavLength < 5 ? cardItemNavLength : 5,
+    slidesToScroll: 1,
+    asNavFor: "#card-slider",
+    dots: true,
+    centerMode: false,
+    focusOnSelect: true,
+    cssEase: "linear",
+    prevArrow: false,
+    nextArrow: false,
+    infinite: true,
+    adaptiveHeight: false
+  });
 });
 
 function initActionFAQ() {
