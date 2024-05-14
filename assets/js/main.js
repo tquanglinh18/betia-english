@@ -75,6 +75,9 @@ function initControlsAudio(idStory) {
   var idBtnPause = idStorySelector + " #btn-pause";
   var idTimeCurrent = idStorySelector + " #time--current";
   var setIntervalTime;
+  var idTimeToal = idStorySelector + " #time--total";
+
+  $(idTimeToal).html($(audioElm)[0].duration.toHHMMSS());
   $(idBtnPlay).click(() => {
     $(idBtnPlay).hide();
     $(idBtnPause).show();
@@ -83,8 +86,8 @@ function initControlsAudio(idStory) {
     });
     $(audioElm)[0].play();
     setIntervalTime = setInterval(() => {
-      $(idTimeCurrent).html(Math.round($(audioElm)[0].currentTime));
-      console.log(Math.round($(audioElm)[0].currentTime));
+      $(idTimeCurrent).html(Math.round($(audioElm)[0].currentTime).toHHMMSS());
+      console.log(typeof Math.round($(audioElm)[0].currentTime).toHHMMSS());
     }, 1000);
   });
 
@@ -96,13 +99,20 @@ function initControlsAudio(idStory) {
   });
 }
 
-function formatTimeAudio(time) {
-  var minute = time/60;
-  
+Number.prototype.toHHMMSS = function () {
+  var sec_num = parseInt(this, 10);
+  var hours = Math.floor(sec_num / 3600);
+  var minutes = Math.floor((sec_num - hours * 3600) / 60);
+  var seconds = sec_num - hours * 3600 - minutes * 60;
 
-  var minute = 0;
-
-if(time < 10) {
-
-}
-}
+  if (hours < 10) {
+    hours = "0" + hours;
+  }
+  // if (minutes < 10) {
+  //   minutes = "0" + minutes;
+  // }
+  if (seconds < 10) {
+    seconds = "0" + seconds;
+  }
+  return minutes + ":" + seconds;
+};
