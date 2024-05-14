@@ -21,8 +21,32 @@ $(function () {
     nextArrow: false,
   });
 
-  initControlsAudio("story-3");
+  // initControlsAudio("story-3");
+
+  initActionFAQ();
 });
+
+function initActionFAQ() {
+  var faqContentsId = "#faq-contents";
+  var faqTabContentsID = faqContentsId + " .tabs__contents--items";
+
+  $(faqTabContentsID).each((index, value) => {
+    var faqItemSelector = "#" + $(value).attr("id") + " .faq-item";
+    var idTabFaq = $(value).attr("id");
+    $(faqItemSelector).each((index, value) => {
+      showFaqContents(idTabFaq, index + 1);
+    });
+  });
+}
+
+function showFaqContents(idTabFaq, indexFaq) {
+  var idFaqItemSelector = "#" + idTabFaq + " #faq-item-" + indexFaq;
+  var btnDropdownIc = idFaqItemSelector + " #ic_drop_faq_" + indexFaq;
+
+  $(btnDropdownIc).click(() => {
+    $(idFaqItemSelector).toggleClass(" faq-item--active");
+  });
+}
 
 function showSubMenu(id) {
   var idSubmenuSelected = "#" + id + "-sub-menu";
@@ -50,12 +74,9 @@ function tabOpen(idSection, idHeaderSelected, idContentSelected) {
 
   var idAllHeaderInSection = "#" + idSection + " .tabs__header--items";
   var idAllContentsInSection = "#" + idSection + " .tabs__contents--items";
-  console.log("idAllContentsInSection: ", idAllContentsInSection);
   tabContent = $(idAllContentsInSection);
   tabContent.each((index, value) => {
     $(value).hide();
-
-    console.log("value: ", $(value));
   });
 
   tabHeader = $(idAllHeaderInSection);

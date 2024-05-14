@@ -28,7 +28,6 @@ $pageHeaderTitleColor: #121d26;
   &__contents {
     @include flex-row-center();
     gap: 2rem;
-    flex: 0 1 0;
     width: 100%;
     &--img {
       height: 65px;
