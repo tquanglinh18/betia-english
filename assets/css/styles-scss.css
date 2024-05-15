@@ -2260,6 +2260,117 @@ header #ic-menu-mobile img {
   justify-content: space-between;
 }
 
+.result-payment {
+  max-width: 768px;
+  padding: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.result-payment__header h3 {
+  color: #17ab13;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 140%;
+  text-align: center;
+}
+.result-payment__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.result-payment__body--img {
+  max-width: 303px;
+  aspect-ratio: 303/248;
+  margin-right: auto;
+  margin-left: auto;
+}
+.result-payment__body--img img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 303/248;
+}
+.result-payment__body--coupon-detail h3 {
+  color: #105296;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 150%;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+.result-payment__body--coupon-detail p {
+  color: #252525;
+  text-align: center;
+}
+.result-payment__body--coupon-detail #copy-message {
+  color: #e02424;
+  font-style: italic;
+  font-size: 12px;
+  margin-bottom: 2rem;
+}
+.result-payment__body--coupon-detail .coupon-code {
+  background-color: #1a82b3;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  max-width: 480px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.result-payment__body--coupon-detail .coupon-code h3 {
+  flex-grow: 1;
+  border-left: #f6f6f6 1px solid;
+  padding-left: 1rem;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+.result-payment__body--user-info {
+  width: 100%;
+}
+.result-payment__body--user-info table {
+  width: 100%;
+}
+.result-payment__body--user-info table thead th {
+  color: #00649d;
+  line-height: 150%;
+  font-weight: bold;
+  color: #252525;
+  text-align: end;
+  padding-bottom: 1rem;
+}
+.result-payment__body--user-info table thead th:first-child {
+  color: #00649d;
+  text-align: start;
+}
+.result-payment__body--user-info table tbody td {
+  line-height: 150%;
+  color: #252525;
+  text-align: end;
+  padding-bottom: 0.5rem;
+}
+.result-payment__body--user-info table tbody td:last-child {
+  font-weight: bold;
+}
+.result-payment__body--user-info table tbody td:first-child {
+  text-align: start;
+}
+.result-payment__footer .btn-base-primary-large {
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
 .btn-base-primary {
   padding: 0.5rem 1rem;
   background-color: #36bdf8;

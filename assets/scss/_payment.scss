@@ -205,3 +205,134 @@
     }
   }
 }
+
+.result-payment {
+  max-width: 768px;
+  padding: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__header {
+    h3 {
+      color: #17ab13;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 140%;
+      text-align: center;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    &--img {
+      max-width: 303px;
+      aspect-ratio: 303/248;
+      margin-right: auto;
+      margin-left: auto;
+      img {
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 303/248;
+      }
+    }
+
+    &--coupon-detail {
+      h3 {
+        color: #105296;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 150%;
+        text-align: center;
+        margin: 0.5rem 0;
+      }
+      p {
+        color: #252525;
+        text-align: center;
+      }
+
+      #copy-message {
+        color: #e02424;
+        font-style: italic;
+        font-size: 12px;
+        margin-bottom: 2rem;
+      }
+
+      .coupon-code {
+        background-color: #1a82b3;
+        box-shadow: 0px 4px 4px 0px #00000040;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: #fff;
+        margin-bottom: 0.5rem;
+        max-width: 480px;
+        margin-right: auto;
+        margin-left: auto;
+        h3 {
+          flex-grow: 1;
+          border-left: #f6f6f6 1px solid;
+          padding-left: 1rem;
+          color: #fff;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &--user-info {
+      width: 100%;
+      table {
+        width: 100%;
+
+        thead {
+          th {
+            color: #00649d;
+            line-height: 150%;
+            font-weight: bold;
+            color: #252525;
+            text-align: end;
+            padding-bottom: 1rem;
+
+            &:first-child {
+              color: #00649d;
+              text-align: start;
+            }
+          }
+        }
+
+        tbody {
+          td {
+            line-height: 150%;
+            color: #252525;
+            text-align: end;
+            padding-bottom: 0.5rem;
+            &:last-child {
+              font-weight: bold;
+            }
+            &:first-child {
+              text-align: start;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__footer {
+    .btn-base-primary-large {
+      padding: 1rem;
+      text-transform: uppercase;
+    }
+  }
+}
