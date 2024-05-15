@@ -78,7 +78,7 @@ function showFaqContents(idTabFaq, indexFaq) {
   });
 }
 
-function showSubMenu(id) {
+function showSubMenu(id) { 
   var idSubmenuSelected = "#" + id + "-sub-menu";
   if ($(idSubmenuSelected).css("display") == "none") {
     $(idSubmenuSelected).show();

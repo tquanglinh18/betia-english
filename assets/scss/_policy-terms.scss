@@ -1,0 +1,43 @@
+@import "responsive";
+
+#policy-terms {
+  .contents {
+    color: #121d26;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    &__header {
+      h3 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 150%;
+      }
+    }
+
+    &__body {
+      ul {
+        li {
+          text-indent: 1.5rem;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+ 
+      .btn-attachments {
+        padding: 0.5rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        border-radius: 85px;
+        min-width: 190px;
+        color: #fff;
+        background-color: #36bdf8;
+      }
+    }
+  }
+}
