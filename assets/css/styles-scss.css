@@ -1093,42 +1093,30 @@ header #ic-menu-mobile img {
   }
 }
 #difference-point .card {
-  border-radius: 50px;
-  aspect-ratio: 1/1;
+  width: 100%;
+  height: 100%;
   position: relative;
+  border-radius: 50px;
+  transition: transform 2s;
+  transform-style: preserve-3d;
+  aspect-ratio: 1/1;
 }
 #difference-point .card__front {
-  height: fit-content;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 50px;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 2rem;
-  background: linear-gradient(180deg, #ebe2da 0%, #ebe2da 50%, rgba(235, 226, 218, 0) 100%);
-}
-@media (min-width: 768px) {
-  #difference-point .card__front {
-    padding: 2rem;
-  }
-}
-@media (min-width: 1024px) {
-  #difference-point .card__front {
-    padding: 3rem;
-  }
-}
-#difference-point .card__front:hover {
   height: 100%;
 }
 #difference-point .card__front--title {
+  border-radius: 50px;
   display: flex;
-  gap: 2.5rem;
+  justify-content: space-between;
+  gap: 2rem;
+  background: linear-gradient(180deg, #ebe2da 0%, #ebe2da 50%, rgba(235, 226, 218, 0) 100%);
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 #difference-point .card__front--title h3 {
   color: var(--hd-gray-100, #121d26);
@@ -1136,6 +1124,7 @@ header #ic-menu-mobile img {
   font-weight: 700;
   line-height: 140%;
   width: fit-content;
+  margin: 0;
 }
 @media (min-width: 768px) {
   #difference-point .card__front--title h3 {
@@ -1155,17 +1144,101 @@ header #ic-menu-mobile img {
   aspect-ratio: 1/1;
   object-fit: cover;
 }
-#difference-point .card__front--desc p {
-  margin-bottom: 1rem;
+@media (min-width: 768px) {
+  #difference-point .card__front--title {
+    padding: 2rem;
+  }
 }
-#difference-point .card__front--desc p:last-child {
-  margin-bottom: 0;
+@media (min-width: 1024px) {
+  #difference-point .card__front--title {
+    padding: 3rem;
+  }
 }
-#difference-point .card__back img {
+#difference-point .card__front--background {
+  height: 100%;
   width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
   border-radius: 50px;
+}
+#difference-point .card__front--background img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}
+#difference-point .card__back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+#difference-point .card__back--background {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}
+#difference-point .card__back--background img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}
+#difference-point .card__back--contents {
+  height: 100%;
+  width: 100%;
+  border-radius: 50px;
+  background-color: rgba(255, 233, 118, 0.6);
+  backdrop-filter: blur(6px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+#difference-point .card__back--contents h3 {
+  padding: 1rem 2rem;
+}
+#difference-point .card__back--contents p {
+  padding: 1rem 2rem;
+}
+#difference-point .card:hover {
+  transform: rotateY(180deg);
+  backface-visibility: visible;
+}
+#difference-point .card-no-flip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#difference-point .card-no-flip--contents {
+  padding: 50px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: rgb(18, 29, 38);
+  background-color: rgb(255, 227, 84);
+  text-align: center;
+}
+#difference-point .card-no-flip--contents p {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+}
+#difference-point .card-no-flip--contents h3 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 42px;
 }
 
 #list-package {
@@ -1303,6 +1376,157 @@ header #ic-menu-mobile img {
   font-weight: 700;
   line-height: 140%;
   text-align: center;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50px;
+  transition: transform 2s;
+  transform-style: preserve-3d;
+  aspect-ratio: 1/1;
+}
+.card__front {
+  width: 100%;
+  height: 100%;
+}
+.card__front--title {
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  background: linear-gradient(180deg, #ebe2da 0%, #ebe2da 50%, rgba(235, 226, 218, 0) 100%);
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.card__front--title h3 {
+  color: var(--hd-gray-100, #121d26);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 140%;
+  width: fit-content;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .card__front--title h3 {
+    font-size: 26px;
+  }
+}
+@media (min-width: 1024px) {
+  .card__front--title h3 {
+    font-size: 32px;
+  }
+}
+.card__front--title > div {
+  width: 48px;
+  height: 48px;
+}
+.card__front--title > div img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+@media (min-width: 768px) {
+  .card__front--title {
+    padding: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .card__front--title {
+    padding: 3rem;
+  }
+}
+.card__front--background {
+  height: 100%;
+  width: 100%;
+  border-radius: 50px;
+}
+.card__front--background img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}
+.card__back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.card__back--background {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}
+.card__back--background img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}
+.card__back--contents {
+  height: 100%;
+  width: 100%;
+  border-radius: 50px;
+  background-color: rgba(255, 233, 118, 0.6);
+  backdrop-filter: blur(6px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+.card__back--contents h3 {
+  padding: 1rem 2rem;
+}
+.card__back--contents p {
+  padding: 1rem 2rem;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+  backface-visibility: visible;
+}
+
+.card-no-flip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-no-flip--contents {
+  padding: 50px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: rgb(18, 29, 38);
+  background-color: rgb(255, 227, 84);
+  text-align: center;
+}
+.card-no-flip--contents p {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+}
+.card-no-flip--contents h3 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 42px;
 }
 
 #intro-betia1 {
@@ -2369,6 +2593,80 @@ header #ic-menu-mobile img {
 .result-payment__footer .btn-base-primary-large {
   padding: 1rem;
   text-transform: uppercase;
+}
+
+#introduction-page .intro__banner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  min-height: 50vh;
+}
+#introduction-page .intro__banner--img {
+  width: 100%;
+  height: 100%;
+}
+#introduction-page .intro__banner--img img {
+  object-fit: cover;
+}
+#introduction-page .intro__banner--contents {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4%;
+}
+@media (min-width: 768px) {
+  #introduction-page .intro__banner--contents {
+    margin-top: 6%;
+  }
+}
+@media (min-width: 1024px) {
+  #introduction-page .intro__banner--contents {
+    margin-top: 8%;
+  }
+}
+#introduction-page .intro__banner--contents .publisher-member {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+#introduction-page .intro__banner--contents .publisher-member img {
+  max-height: 32px;
+}
+@media (min-width: 768px) {
+  #introduction-page .intro__banner--contents .publisher-member img {
+    max-height: 48px;
+  }
+}
+@media (min-width: 768px) {
+  #introduction-page .intro__banner--contents .publisher-member img {
+    max-height: 60px;
+  }
+}
+#introduction-page .intro__banner--contents h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 768px) {
+  #introduction-page .intro__banner--contents h3 {
+    font-size: 24px;
+    line-height: 150%;
+    margin-bottom: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  #introduction-page .intro__banner--contents h3 {
+    font-size: 32px;
+    line-height: 150%;
+    margin-bottom: 2rem;
+  }
 }
 
 .btn-base-primary {
