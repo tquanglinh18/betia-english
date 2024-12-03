@@ -1,1 +1,102 @@
-@import "responsive";
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin mobile {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+$grey-252525: #252525;
+$blue-01B3F5: #01b3f5;
+
+.page-layout {
+  display: flex;
+
+  .page-navigate {
+    flex: 0 0 20%;
+    padding: 1.5rem;
+    background-color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .logo-betia {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .lst-tab-nav {
+      margin-bottom: 4%;
+      flex: 1;
+    }
+
+    .account-action {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .page-content {
+    flex: 1;
+    padding: 1.5rem;
+    background-color: #ffffff;
+  }
+}
+
+.nav-item {
+  width: 100%;
+  padding: 1rem 0.75rem;
+  color: $grey-252525;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--active,
+  &:hover {
+    background: linear-gradient(to right, #0095da, #00bfff);
+    color: white;
+  }
+}
+
+.btn-base {
+  width: fit-content;
+  min-width: 120px;
+  min-height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid $blue-01B3F5;
+  color: $blue-01B3F5;
+  padding: 0.75rem 1.25rem;
+  background-color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: white;
+    background-color: $blue-01B3F5;
+  }
+}

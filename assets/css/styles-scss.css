@@ -1,0 +1,70 @@
+.page-layout {
+  display: flex;
+}
+.page-layout .page-navigate {
+  flex: 0 0 20%;
+  padding: 1.5rem;
+  background-color: #f4f4f4;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.page-layout .page-navigate .logo-betia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-layout .page-navigate .lst-tab-nav {
+  margin-bottom: 4%;
+  flex: 1;
+}
+.page-layout .page-navigate .account-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-layout .page-content {
+  flex: 1;
+  padding: 1.5rem;
+  background-color: #ffffff;
+}
+
+.nav-item {
+  width: 100%;
+  padding: 1rem 0.75rem;
+  color: #252525;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.nav-item:last-child {
+  margin-bottom: 0;
+}
+.nav-item--active, .nav-item:hover {
+  background: linear-gradient(to right, #0095da, #00bfff);
+  color: white;
+}
+
+.btn-base {
+  width: fit-content;
+  min-width: 120px;
+  min-height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid #01b3f5;
+  color: #01b3f5;
+  padding: 0.75rem 1.25rem;
+  background-color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-base:hover {
+  color: white;
+  background-color: #01b3f5;
+}
