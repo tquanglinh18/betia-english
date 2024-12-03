@@ -22,11 +22,12 @@
   font-display: swap;
 }
 
-/* body {
-  font-family: Myriad Pro;
+body {
+  font-family: "Myriad Pro";
   font-weight: normal;
   font-style: normal;
-} */
+  background-color: #f5f7f9;
+}
 
 * {
   padding: 0;
