@@ -35,11 +35,29 @@ $desktop-extra-width: 1440px;
   -webkit-box-orient: vertical;
 }
 
+// Màu xám đen
 $grey-252525: #252525;
-$blue-01B3F5: #01b3f5;
 $grey-121D26: #121d26;
 $grey-A0A5A8: #a0a5a8;
+$grey-676767: #676767;
+
+// Màu đỏ
 $red-FF0000: #ff0000;
+
+//Màu xanh trời
+$blue-01B3F5: #01b3f5;
+$blue-0095DA: #0095da;
+$blue-105296: #105296;
+$blue-00649D: #00649d;
+
+// Màu xanh lá
+$green-45BB37: #45bb37;
+
+// Màu Border
+$boder-C4C4C4: #c4c4c4;
+
+// Màu vàng
+$yl-F79C1F: #f79c1f;
 
 .page-layout {
   display: flex;
@@ -78,7 +96,7 @@ $red-FF0000: #ff0000;
     }
 
     @include desktop-extra() {
-      flex: 0 0 15%;
+      flex: 0 0 20%;
     }
   }
 
@@ -99,6 +117,7 @@ $red-FF0000: #ff0000;
     p {
       color: $red-FF0000;
       line-height: 1.5;
+      margin-bottom: 0;
     }
     h3 {
       color: $grey-121D26;
@@ -146,10 +165,12 @@ $red-FF0000: #ff0000;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
   border-radius: 0.5rem;
   border: 1px solid $blue-01B3F5;
   color: $blue-01B3F5;
   padding: 0.75rem 1.25rem;
+  margin: 0.25rem 0.5rem;
   background-color: white;
   font-weight: bold;
   cursor: pointer;
@@ -158,6 +179,39 @@ $red-FF0000: #ff0000;
   &:hover {
     color: white;
     background-color: $blue-01B3F5;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  &--blue-0095DA {
+    background-color: $blue-0095DA;
+    color: white;
+    border: none;
+    &:hover {
+      background-color: white;
+      color: $blue-0095DA;
+    }
+  }
+
+  &--sm {
+    padding: 0.25rem;
+    min-width: 68px;
+    border-radius: 0.25rem;
+    min-height: unset;
+  }
+
+  &--blue-0095DA-large {
+    background-color: $blue-0095DA;
+    color: white;
+    border: none;
+    min-height: 50px;
+    max-width: 200px;
+    &:hover {
+      background-color: white;
+      color: $blue-0095DA;
+    }
   }
 }
 
@@ -180,13 +234,14 @@ $red-FF0000: #ff0000;
   }
 }
 
-.package-item {
+.package-card {
   width: 100%;
   background-color: #fff;
   color: $grey-121D26;
   padding: 1.5rem;
   border-radius: 1.25rem;
   max-width: 540px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -246,6 +301,7 @@ $red-FF0000: #ff0000;
       h3 {
         font-size: 1.25rem;
         line-height: 1.5;
+        margin-bottom: 0;
         @include tablet {
           font-size: 1.675rem;
         }
@@ -259,6 +315,7 @@ $red-FF0000: #ff0000;
         font-size: 0.75rem;
         p {
           color: $red-FF0000;
+          margin-bottom: 0;
         }
         del {
           color: $grey-A0A5A8;
@@ -284,5 +341,222 @@ $red-FF0000: #ff0000;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+.section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  color: $grey-121D26;
+  &__header {
+    width: 100%;
+    &--title {
+      width: 100%;
+      margin-bottom: 0.5rem;
+      line-height: 1.5;
+    }
+    &--desc {
+      width: 100%;
+      margin-bottom: 0.5rem;
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__body {
+    width: 100%;
+  }
+
+  &__footer {
+  }
+}
+
+.lst-action-agent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.table-base {
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  overflow: auto;
+  p {
+    margin-bottom: 0;
+  }
+  table {
+    width: 100%;
+    font-size: 0.875rem;
+    thead {
+      border-bottom: 1px solid $blue-00649D;
+      th {
+        font-weight: bold;
+        color: $blue-00649D;
+        padding: 0.75rem 0.5rem;
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid $boder-C4C4C4;
+
+        td {
+          padding: 0.75rem 0.5rem;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    tfoot {
+      tr {
+        border-top: 1px solid $boder-C4C4C4;
+        td {
+          font-weight: bold;
+          padding: 1rem 0.5rem;
+
+          // &:last-child {
+          //   text-align: end;
+          // }
+        }
+      }
+    }
+  }
+}
+
+.status {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  &--active {
+    color: $green-45BB37;
+    font-weight: bold;
+  }
+
+  &--unactive {
+    color: $grey-676767;
+  }
+  &--waiting {
+    color: $yl-F79C1F;
+    font-weight: bold;
+  }
+}
+
+.lst-affiliated-agents {
+  table {
+    thead {
+      th {
+        width: 10%;
+        &:nth-child(1) {
+          width: 5%;
+        }
+
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(6) {
+          width: 15%;
+        }
+      }
+    }
+  }
+}
+
+.lst-revenue-management {
+  table {
+    thead {
+      th {
+        width: 25%;
+        &:nth-child(1) {
+          width: 5%;
+        }
+
+        &:nth-child(2) {
+          width: 20%;
+        }
+      }
+    }
+
+    tbody {
+      td {
+        &:nth-child(2) {
+          text-align: start;
+        }
+      }
+    }
+  }
+}
+
+.report-management {
+  table {
+    thead {
+      th {
+        width: 20%;
+        &:nth-child(1) {
+          width: 5%;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: 15%;
+        }
+      }
+    }
+  }
+}
+
+#payment-waiting {
+  .section__header--title {
+    color: $yl-F79C1F;
+    margin-bottom: 0;
+    font-size: 1.25rem;
+  }
+  .lst-payment-waiting {
+    table {
+      thead {
+        th {
+          width: 10%;
+
+          &:nth-child(4),
+          &:nth-child(6) {
+            width: 15%;
+          }
+
+          &:nth-child(1) {
+            width: 8%;
+          }
+
+          &:last-child {
+            width: 12%;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            padding: 0.5rem 0.25rem;
+            &:last-child {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-wrap: wrap;
+            }
+          }
+        }
+      }
+    }
   }
 }
