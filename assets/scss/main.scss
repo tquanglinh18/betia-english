@@ -72,22 +72,6 @@ $yl-F79C1F: #f79c1f;
     top: 0;
     left: 0;
     bottom: 0;
-    .logo-betia {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .lst-tab-nav {
-      margin-bottom: 4%;
-      flex: 1;
-    }
-
-    .account-action {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
     @include desktop {
       display: block;
       flex: 0 0 25%;
@@ -103,11 +87,31 @@ $yl-F79C1F: #f79c1f;
       flex: 0 0 20%;
     }
   }
-
   .page-content {
+    width: 100%;
     flex: 1;
-    padding: 1.5rem;
+    padding: 1rem;
+
+    @include tablet {
+      padding: 1.5rem;
+    }
   }
+}
+
+.logo-betia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lst-tab-nav {
+  margin-bottom: 4%;
+  flex: 1;
+}
+
+.account-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .services-item {
@@ -141,8 +145,9 @@ $yl-F79C1F: #f79c1f;
   }
 }
 
-.nav-item {
+.tab-header-item {
   width: 100%;
+  min-width: 180px;
   padding: 1rem 0.75rem;
   color: $grey-252525;
   font-weight: bold;
@@ -158,6 +163,53 @@ $yl-F79C1F: #f79c1f;
   &:hover {
     background: linear-gradient(to right, #0095da, #00bfff);
     color: white;
+  }
+}
+
+.nav {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  &[aria-orientation="vertical"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 0;
+    .nav-link {
+      text-align: start;
+    }
+  }
+}
+
+.nav-link {
+  width: 100%;
+  min-width: 84px;
+  padding: 0.5rem 0.75rem;
+  color: #25252599;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem !important;
+  cursor: pointer;
+  text-align: center;
+  background-color: white;
+
+  &:hover,
+  &.active {
+    background: linear-gradient(to right, #0095da, #00bfff) !important;
+    color: white;
+  }
+
+  @include tablet {
+    min-width: 124px;
+    padding: 0.75rem;
+  }
+
+  @include desktop {
+    min-width: 180px;
+    padding: 1rem 0.75rem;
   }
 }
 
@@ -183,6 +235,9 @@ $yl-F79C1F: #f79c1f;
   &:hover {
     color: white;
     background-color: $blue-01B3F5;
+    p {
+      transform: scale(1.05);
+    }
   }
 
   p {
@@ -196,6 +251,12 @@ $yl-F79C1F: #f79c1f;
     &:hover {
       background-color: white;
       color: $blue-0095DA;
+      // img {
+      //   display: none;
+      // }
+      p {
+        transform: scale(1.05);
+      }
     }
   }
 
@@ -224,6 +285,16 @@ $yl-F79C1F: #f79c1f;
     padding: 0.25rem 01rem;
     min-width: unset;
     max-width: 64px;
+    &:hover {
+      background: white;
+      color: $blue-0095DA;
+      // img {
+      //   display: none;
+      // }
+      p {
+        transform: scale(1.05);
+      }
+    }
   }
 }
 
@@ -358,14 +429,13 @@ $yl-F79C1F: #f79c1f;
 
 .section {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1280px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding: 1rem 0;
   color: $grey-121D26;
   &__header {
     width: 100%;
@@ -391,9 +461,30 @@ $yl-F79C1F: #f79c1f;
 .lst-action-agent {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+
+  @include tablet {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    color: $blue-0095DA;
+    transition: all 0.3s;
+    p {
+      margin-bottom: 0;
+    }
+    &:hover {
+      color: white;
+    }
+  }
 }
 
 .table-base {
@@ -408,6 +499,8 @@ $yl-F79C1F: #f79c1f;
   }
   table {
     width: 100%;
+    min-width: 1200px;
+    overflow: hidden;
     font-size: 0.875rem;
     thead {
       border-bottom: 1px solid $blue-00649D;
@@ -480,6 +573,15 @@ $yl-F79C1F: #f79c1f;
         }
       }
     }
+
+    tbody {
+      td {
+        &:last-child {
+          align-content: center;
+          justify-items: center;
+        }
+      }
+    }
   }
 }
 
@@ -531,6 +633,10 @@ $yl-F79C1F: #f79c1f;
     color: $yl-F79C1F;
     margin-bottom: 0;
     font-size: 1.25rem;
+  }
+
+  .btn-base {
+    font-size: 12px;
   }
   .lst-payment-waiting {
     table {
@@ -615,9 +721,11 @@ $yl-F79C1F: #f79c1f;
     }
   }
   &--goID {
-    font-size: 1rem;
+    font-size: 14px;
     color: $grey-252525;
     @include tablet {
+      font-size: 1rem;
+
       display: flex;
       justify-content: end;
       align-items: end;
@@ -633,10 +741,11 @@ $yl-F79C1F: #f79c1f;
     }
   }
   &--total-go {
-    font-size: 20px;
+    font-size: 14px;
     color: $blue-0095DA;
     font-weight: bold;
     @include tablet {
+      font-size: 20px;
       display: flex;
       justify-content: end;
       align-items: end;
@@ -654,6 +763,7 @@ $yl-F79C1F: #f79c1f;
   background-color: white;
   border-radius: 1.5rem;
   padding: 1.5rem;
+  margin-bottom: 1rem;
   &__header {
     width: 100%;
     border-left: 3px solid $border-FF69B4;
@@ -687,7 +797,7 @@ $yl-F79C1F: #f79c1f;
 .input-field {
   width: 100%;
   max-width: 480px;
-  margin: 1rem auto;
+  margin: 0 auto 1rem auto;
   font-size: 14px;
   line-height: 1.5;
   display: flex;
@@ -707,14 +817,181 @@ $yl-F79C1F: #f79c1f;
     color: $grey-252525;
     margin-bottom: 0;
   }
-  input {
+  .input-container {
     width: 100%;
+    min-height: 52px;
     background-color: $grey-F0F2F5;
     color: $grey-252525;
     font-weight: bold;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     border: none;
     border-radius: 0.5rem;
     max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    input,
+    select {
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      font-weight: bold;
+      &:active,
+      &:focus {
+        border: none;
+        outline: none;
+      }
+
+      &[id="invite-link"] {
+        color: $blue-0095DA;
+        font-weight: bold;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .btn-base {
+      min-height: 36px;
+      margin: 0;
+    }
+  }
+}
+
+input,
+button {
+  &:active,
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+.video-guide {
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem auto 2rem auto;
+  aspect-ratio: 590/402;
+  position: relative;
+
+  &--frame {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+
+  &--source {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 3rem;
+    position: absolute;
+    top: -0.5rem;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    iframe {
+      width: 100%;
+      border-radius: 3rem;
+      aspect-ratio: 590/402;
+      object-fit: contain;
+    }
+  }
+}
+
+.text-guide {
+  color: $grey-121D26;
+  font-size: 0.75rem;
+  @include tablet {
+    font-size: 0.875px;
+  }
+
+  @include desktop {
+    font-size: 1rem;
+  }
+  h3 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    font-size: 16px;
+  }
+  p {
+    margin-bottom: 0;
+    line-height: 1.25;
+  }
+}
+
+.menu-mobile {
+  position: relative;
+  height: 64px;
+  width: 100vw;
+  box-shadow: 4px 0 4px rgba(0, 0, 0, 0.2);
+  display: block;
+
+  @include desktop {
+    display: none;
+  }
+
+  &__toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 5rem 1rem 2rem 1rem;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 320px;
+    background-color: #fff;
+    box-shadow: 4px 0 4px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+
+    &--active {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      left: 0;
+      z-index: 999;
+    }
+  }
+
+  &--item {
+    margin: 0.75rem 0;
+    text-align: center;
+  }
+}
+
+.filter-data {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  @include tablet {
+    justify-content: end;
+  }
+  &--input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  &--button {
+    max-width: fit-content;
+    .btn-base {
+      width: 100%;
+    }
   }
 }
